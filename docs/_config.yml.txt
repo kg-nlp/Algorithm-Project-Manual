@@ -1,0 +1,14 @@
+title: Algorithm-Project-Manual
+lang: zh
+description: 算法工程开发手册
+
+remote_theme: rundocs/jekyll-rtd-theme
+
+readme_index:
+  with_frontmatter: true
+
+exclude:
+  - Makefile
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
