@@ -1,2 +1,7 @@
-# Algorithm-Project-Manual
-算法工程开发手册
+---
+sort:1
+---
+
+# 大模型
+
+<!-- {% include list.liquid %} -->
