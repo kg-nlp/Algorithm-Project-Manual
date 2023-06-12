@@ -11,7 +11,7 @@ sort: 4
 ### 容器环境配置
 * [有道云链接](https://note.youdao.com/s/SyuVJga)
 
-```
+```shell
 #拉取最新的镜像
 docker pull hpcaitech/colossalai:0.3.0  
 #启动镜像
