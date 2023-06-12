@@ -66,8 +66,8 @@ docker commit colossal_env registry.cn-beijing.aliyuncs.com/sg-gie/colossalai:0.
 *  与HuggingFace生成集成,模型自由定制
 ### Chat环境搭建
 * 安装chat环境
-```
-#进入容器
+```shell
+# 进入容器
 docker exec -it colossal_env bash
 cd /workspace
 git clone https://github.com/hpcaitech/ColossalAI.git
@@ -75,7 +75,7 @@ cd ColossalAI/applications/Chat
 pip install -r requirements.txt 
 ```
 * 安装Transformers环境
-```
+```shell
 cd /workspace
 git clone https://github.com/hpcaitech/transformers
 cd transformers
