@@ -583,6 +583,48 @@ AI客户代理
 
 [链接](https://github.com/datawhalechina/hugging-llm/tree/main)
 
+## 2 百度-基于大模型的优质Prompt开发课
+
+[百度课程链接](https://aistudio.baidu.com/aistudio/course/introduce/28604)
+
+### 2.1 优质Prompt设计
+
+*   百度定义何为优质的Prompt
+    *   表达清洗：指令通俗易懂，整体指令可以很长，但要分好层级，层层递进，每句话表达简洁清晰。要让模式能够识别，也要让普通人也能看明白。
+    *   通用性强：在同类任务上，更换主体词后仍有不错的效果。比如描写动物的提示词，更换主体动物类型后依旧可以生成高质量内容。
+    *   生成稳定：相同提示词情况下，生成内容稳定基本都能使用，并且结果变化不大。
+* 设计流程
+    * Prompt万能公式： 任务+生成主体+细节（可选）+形式（可选）
+    * 任务：希望模型或对话机器人完成的任务类型，如“请生成一篇xxx”，“你现在扮演xxx角色”，"你现在是一个xxx"。
+    * 生成主体：生成的主要对象，如“请生成一篇xxx的广告文案”，其中xxx就是生成主体
+    * 细节：丰富或约束主体相关的任务内容，比如增加xxx,xxx的主体，句长限制等
+    * 形式：输出的排版
+* 场景示例
+    * 简历润色
+    * 面试准备
+    * 歌词生成
+    * 种草文章
+    * 代码生成
+    * 组装电脑
+
+
+## 3 提示工程指南
+[链接](https://www.promptingguide.ai/zh)
+* 原作者使用的是text-davinci-003，本次测试使用gpt-3.5-turbo(POE)
+    * OpenAI官网对话中，有多个模型，包括text-davinci-003、gpt-3.5-turbo、gpt-4。
+    * GPT-3.5系列是一系列在2021年第四季度之前的文本和代码混合训练的模型。
+        * 以下是GPT-3.5系列中的几个模型:
+        * code-davinci-002是一个基础模型，适用于纯代码补全任务。
+        * text-davinci-002是基于code-davinci-002的InstructGPT模型。
+        * text-davinci-003是text-davinci-002的改进版。
+        * gpt-3.5-turbo-0301是在text-davinci-003的基础上进行了改进，针对聊天应用进行了优化。
+    * 大多数情况下，选择gpt-3.5-turbo优于text-davinc-003，毕竟前者API价格只有后者的1/10
+    * [说明来源](https://zhuanlan.zhihu.com/p/621777507)
+
+
+
+
+
 ## 必备知识
 
 1.  [Temperature在模型中的作用](https://zhuanlan.zhihu.com/p/615675305)
