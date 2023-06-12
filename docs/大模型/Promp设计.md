@@ -19,7 +19,7 @@ sort: 1
 #### 1.1.1 提示原则
 ##### 1. openai的环境
 （国内无法注册仅做参考，后续示例均是poe环境中测试的结果）
-```
+```Python
 pip install openai
 pip install -U python-dotenv
 # 将自己的 API-KEY 导入系统环境变量
