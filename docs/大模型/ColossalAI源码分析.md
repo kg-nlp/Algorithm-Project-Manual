@@ -3,12 +3,12 @@ sort: 4
 ---
 # ColossalAI源码分析
 
-# 环境配置
+## 环境配置
 
 * ![镜像下载](https://note.youdao.com/yws/api/personal/file/WEB386ef86df22f59c31dd7847ea71e8c79?method=download&shareKey=0a1ccc7142b789db2d98ca350aa84568)
 * [docker-hub地址](https://hub.docker.com/r/hpcaitech/colossalai)
     
-## 容器环境配置
+### 容器环境配置
 * [有道云链接](https://note.youdao.com/s/SyuVJga)
 
 ```
@@ -52,8 +52,8 @@ docker commit colossal_env registry.cn-beijing.aliyuncs.com/sg-gie/colossalai:0.
 # 每次启动镜像时,进入容器内部执行 service ssh restart  可以在容器外通过pycharm 远程访问,访问端口8095
 ```
 
-# Chat示例
-## 官方chat训练流程
+## Chat示例
+### 官方chat训练流程
 [知乎参考资料](https://www.zhihu.com/tardis/zm/art/618048558?source_id=1005)
 ![流程图](https://raw.githubusercontent.com/hpcaitech/public_assets/main/applications/chatgpt/chatgpt.png) 
 *  支持全面的大型模型训练加速能力的ColossalAI，不需要复杂的分布式训练算法的知识
@@ -64,7 +64,7 @@ docker commit colossal_env registry.cn-beijing.aliyuncs.com/sg-gie/colossalai:0.
 *  量化推理
 *  快速部署
 *  与HuggingFace生成集成,模型自由定制
-## Chat环境搭建
+### Chat环境搭建
 * 安装chat环境
 ```
 #进入容器
@@ -81,7 +81,7 @@ git clone https://github.com/hpcaitech/transformers
 cd transformers
 pip install .
 ```
-## 数据集准备
+### 数据集准备
 * SFT指令微调数据集
     * 本地路径:D:\项目-预训练模型\ColossalAI-main\data\InstructionWild 
     * [InstructionWild数据集](https://github.com/XueFuzhao/InstructionWild/tree/main)
@@ -111,7 +111,7 @@ pip install .
     * 本地路径: D:\项目-预训练模型\ColossalAI-main\data\alpaca_data
     * 本地路径:D:\项目-预训练模型\ColossalAI-main\data\InstructionWild 
 
-## 模型准备
+### 模型准备
 * LLAMA模型 
     *  [facebook(meta)开源产品](https://ipfs.io/ipfs/Qmb9y5GCkTG7ZzbBWMu2BXwMkzyCKcUjtEKPpgdZ7GEFKm/)
     *  [内网下载](https://www.123pan.com/s/Su8ZVv-g97q3.html)
@@ -124,7 +124,7 @@ pip install .
 * Bloomz模型
     * BLOOM是一个在46种自然语言和13种编程语言上训练的1760亿个参数的语言模型
     * [huggingface下载](https://huggingface.co/bigscience/bloomz-7b1-mt)
-## 训练脚本
+### 训练脚本
 ![训练流程](https://raw.githubusercontent.com/hpcaitech/public_assets/main/applications/chat/stage-3.jpeg)
 * 监督指令微调: examples/train_sft.sh
 * 训练奖励模型: examples/train_rm.sh
@@ -132,7 +132,7 @@ pip install .
 
 
 
-# 源码解析
+## 源码解析
 * [Chat源码地址](https://github.com/hpcaitech/ColossalAI/tree/main/applications/Chat) 截止实际时间20230612
 
 ```
@@ -155,12 +155,12 @@ from coati.models import convert_to_lora_module
 #需要提前处理一下,更改下train_reward_model.py
 ```
 
-## 资料
+### 资料
 [中文教程](https://colossalai.org/zh-Hans/docs/get_started/installation/)
 
 
 
-# 其他
+## 其他
 
 ![GPT-4训练流程](https://github.com/shibing624/MedicalGPT/raw/main/docs/GPT_Training.jpg)
 * 第一阶段：PT(Continue PreTraining)增量预训练，在海量领域文档数据上二次预训练GPT模型，以注入领域知识
