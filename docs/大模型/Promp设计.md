@@ -7,7 +7,7 @@ sort: 1
 **以下格式可能有错乱，请阅读原文**
 [有道云原文链接](https://note.youdao.com/s/KdL6qM0C)
 
-# 1 prompt-engineering-for-developers
+## 1 prompt-engineering-for-developers
 
 [链接](https://github.com/datawhalechina/prompt-engineering-for-developers)
 
@@ -15,9 +15,9 @@ sort: 1
 
 ![POE图片](https://note.youdao.com/yws/api/personal/file/WEB0285a279f7df04cd33f682f1dcf9ce04?method=download&shareKey=3180bc51a04c4ad640773dd39c197b6b) 
 
-## 1.1 Prompt Engineering
-### 1.1.1 提示原则
-#### 1. openai的环境
+### 1.1 Prompt Engineering
+#### 1.1.1 提示原则
+##### 1. openai的环境
 （国内无法注册仅做参考，后续示例均是poe环境中测试的结果）
 ```
 pip install openai
@@ -50,7 +50,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
     # 调用 OpenAI 的 ChatCompletion 接口
     return response.choices[0].message["content"]
 ```
-#### 2. 两个基本原则
+##### 2. 两个基本原则
     - 原则一:编写清晰,具体的指令
         - 可以使用更长的指令,分行编写
         - 使用明显的分隔符**待解析的文本**和**prompt**区分开,分隔符可以使用```,"",<>,<tag>,<\tag>等
@@ -65,9 +65,9 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
         - 将一个任务拆开几步去解决,理解过程,输出结果
         - 涉及计算方案比较,先让模型自己解决,再去做对比(给出模型怎么比较的流程prompt)
         - 模型预测有一定的局限性,会生成一些虚假知识,最好提示模型找到文本中的一些引用,根据引用进行回答，或者进行模型检查其他另外说明。
-#### 3. 示例  
+##### 3. 示例  
 
-##### eg.1 
+###### eg.1 
 ```
 对下面<>中的文本总结成一句话。
 
@@ -80,7 +80,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
 ```
 为了让模型执行任务，应提供清晰、具体的指示，避免简短提示和清晰提示混淆，更长的提示可以提供更多的上下文信息，从而得到更详细和相关的输出。
 ```
-##### eg.2 结构化输出
+###### eg.2 结构化输出
 ```
 请生成包括书名、作者和类别的三本虚构书籍清单。
 以JSON 格式提供，其中包含以下键:book_id、title、author、genre。
@@ -109,7 +109,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
   }
 ]
 ```
-##### eg.3 模型检验
+###### eg.3 模型检验
 ```
 解析下面<>括起来的文本。
 如果它包含一系列的指令，则需要按照以下格式重新编写这些指令，输出尽量简短：
@@ -142,7 +142,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
 
 因此，输出的指令如上所示。
 ```
-##### eg.4 提供示例
+###### eg.4 提供示例
 ```
 请以一致的风格回答以下问题。
 <孩子>: 教我耐心。
@@ -156,7 +156,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
 <祖父母>: 韧性不是一蹴而就的，它是在面对挫折和困难时坚定不移的追求目标和解决问题的能力。类似于锻炼肌肉一样，你需要经历一些挑战和困难，才能不断增强你的韧性。不要轻易放弃，要相信自己的能力，坚持不懈地追求目标，这样你的韧性就会越来越强。
 ```
 
-##### eg.5 将一个任务拆开几步去解决
+###### eg.5 将一个任务拆开几步去解决
 ```
 解析下面"""括起来的文本。
 1.用一句话概括文本。
@@ -190,7 +190,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
 
 输出 JSON：{"English_summary": "Brother and sister Jack and Jill went to fetch water from a mountaintop well in a charming village. While singing joyfully and climbing up, they unfortunately stumbled on a rock and tumbled down the hill, with Jill following Jack. Despite some minor injuries, they made it back to their cozy home. Nevertheless, their spirit of adventure remained undiminished as they continued to explore with joy.", "num_names": 2}
 ```
-#### eg.6 指导模型解决方案并比较 
+##### eg.6 指导模型解决方案并比较 
 ```
 解析下面"""括起来的问题，并判断学生的解决方案是否正确，解析步骤如下：
 
@@ -244,7 +244,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
 
 学生的成绩：不正确
 ```
-#### eg.7 局限性
+##### eg.7 局限性
 ```
 告诉我 Boie 公司生产的 AeroGlide UltraSlim Smart Toothbrush 的相关信息。
 如果该公司没有生产这款产品，请给出引用说明。
@@ -255,8 +255,8 @@ Boie 公司确实生产了一系列口腔护理产品，包括牙刷、牙膏和
 
 可能是出于某种误解或信息错误，导致您提出了这个问题。如果您有其他关于 Boie 公司或其他公司的产品的问题，我会尽力为您提供相关信息。
 ```
-### 1.1.2 迭代优化
-#### 根据产品说明书制作一份营销产品描述
+#### 1.1.2 迭代优化
+##### 根据产品说明书制作一份营销产品描述
 
 > prompt优化： 字数限制，细节引导，格式输出
 
@@ -336,7 +336,7 @@ Boie 公司确实生产了一系列口腔护理产品，包括牙刷、牙膏和
 滚轮选项|软地板或硬地板滚轮选项|
 座椅泡沫密度|中等（1.8磅/立方英尺）或高（2.8磅/立方英尺|
 
-### 1.1.3 文本概括
+#### 1.1.3 文本概括
 参考 上一节eg.5 将一个任务拆开几步去解决
 ```
 解析下面"""括起来的文本。
@@ -367,10 +367,10 @@ Boie 公司确实生产了一系列口腔护理产品，包括牙刷、牙膏和
 
 关键词：熊猫公仔，价钱，快递
 ```
-### 1.1.4 推断
+#### 1.1.4 推断
 从产品评论和新闻文章中推断情感和主题  
 可能涉及提取标签、提取实体、理解文本情感等等
-#### eg.1
+##### eg.1
 ```
 解析下面"""括起来的评论文本。
 
@@ -412,7 +412,7 @@ Boie 公司确实生产了一系列口腔护理产品，包括牙刷、牙膏和
 "品牌": "Lumina"
 }
 ```
-#### eg.2
+##### eg.2
 ```
 解析下面"""括起来的评论文本。
 
@@ -444,8 +444,8 @@ Boie 公司确实生产了一系列口腔护理产品，包括牙刷、牙膏和
 }
 ```
 
-### 1.1.5 文本转换
-#### eg.1 翻译
+#### 1.1.5 文本转换
+##### eg.1 翻译
 ```
 解析下面"""括起来的文本。
 请将文本分别翻译为英语，法语，德语，日语，韩语。
@@ -464,7 +464,7 @@ Boie 公司确实生产了一系列口腔护理产品，包括牙刷、牙膏和
 日语翻译：こんにちは、ミキサーを注文したいと思います。
 韩语翻译：안녕하세요, 믹서기를 주문하고 싶습니다.
 ```
-#### eg.2 语义调整
+##### eg.2 语义调整
 ```
 解析下面"""括起来的文本。
 请将文本分别以专业语气，日常语气，坦诚语气，自信语气，友好语气进行表达。
@@ -487,7 +487,7 @@ Boie 公司确实生产了一系列口腔护理产品，包括牙刷、牙膏和
 
 以友好语气表达：随着全球化和跨境商务的发展，我们可能会与来自不同国家的用户交流，这也是一个很有趣的经历。
 ```
-#### eg.3 翻译+纠错+风格+格式转换
+###### eg.3 翻译+纠错+风格+格式转换
 ```
 请按步骤解析下面"""括起来的文本。
 - 进行拼写和语法纠错。
@@ -531,8 +531,8 @@ to play with it myself before I gave it to my daughter.
 ```
 
 
-### 1.1.6 文本扩展
-#### eg.1 回复邮件
+#### 1.1.6 文本扩展
+##### eg.1 回复邮件
 
 ```
 你是一位客户服务的AI助手。
@@ -575,15 +575,15 @@ AI客户代理
 ```
 
 
-## 1.2 Building Systems with the ChatGPT API
+### 1.2 Building Systems with the ChatGPT API
 
-## 1.3 LangChain for LLM Application Development
+### 1.3 LangChain for LLM Application Development
 
-## 1.4 HuggingLLM
+### 1.4 HuggingLLM
 
 [链接](https://github.com/datawhalechina/hugging-llm/tree/main)
 
-# 必备知识
+## 必备知识
 
 1.  [Temperature在模型中的作用](https://zhuanlan.zhihu.com/p/615675305)
     *   Temperature 是一个超参数，可用于控制生成语言模型中生成文本的随机性和创造性。 它用于调整模型的softmax输出层中预测词的概率。 温度参数定义为在应用 softmax 函数之前用于调整 logits 的比例因子的倒数。
@@ -591,7 +591,7 @@ AI客户代理
     *   温度参数通常设置为 0.1 到 1.0 之间的值，具体取决于生成文本中所需的随机性和创造性水平。 温度值为 1.0 对应于标准 softmax 函数，其中预测词的概率未按比例缩放
     2.
 
-# ChatGPT使用网站
+## ChatGPT使用网站
 
 1.  <https://poe.com/>
 2.  
