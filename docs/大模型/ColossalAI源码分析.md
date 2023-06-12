@@ -8,20 +8,21 @@ sort: 4
     
 ## 容器环境配置
 * [有道云链接](https://note.youdao.com/s/SyuVJga)
+
 ```
-# 拉取最新的镜像
+#拉取最新的镜像
 docker pull hpcaitech/colossalai:0.3.0  
-# 启动镜像
+#启动镜像
 docker run -it -d --name colossal_env -p 8095:22 -p 7000:7000 -p 7010:7010 -p 7020:7020 -v /data/user/zhangyj/LLM:/workspace/LLM --gpus all --ipc=host hpcaitech/colossalai:0.3.0 bash
 
-# 容器工作目录: /workspace
-# 在当前容器中查找python 和 pip 的位置 /opt/conda/bin/python
+#容器工作目录: /workspace
+#在当前容器中查找python 和 pip 的位置 /opt/conda/bin/python
 
-# 原容器ssh无法启动,copy pytorch_env下的配置文件
+#原容器ssh无法启动,copy pytorch_env下的配置文件
 docker cp pytorch_env:/etc/ssh/sshd_config /home/zhangyj/
 docker cp /home/zhangyj/sshd_config colossal_env:/etc/ssh/sshd_config
 
-# sshd_config 内容
+#sshd_config 内容
 ChallengeResponseAuthentication no
 UsePAM yes
 X11Forwarding yes
@@ -32,18 +33,18 @@ PubkeyAuthentication yes
 RSAAuthentication yes
 PermitRootLogin yes
 
-# 安装ssh-server
+#安装ssh-server
 apt-get install -y openssh-server
 service ssh restart
 
-# 创建软连接
+#创建软连接
 ln -s /opt/conda/bin/python /usr/local/bin/python
 ln -s /opt/conda/bin/pip /usr/local/bin/pip
 
-# 永久更新清华源
+#永久更新清华源
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
-# commit新镜像
+#commit新镜像
 docker commit colossal_env registry.cn-beijing.aliyuncs.com/sg-gie/colossalai:0.3.0
 
 # 每次启动镜像时,进入容器内部执行 service ssh restart  可以在容器外通过pycharm 远程访问,访问端口8095
@@ -64,7 +65,7 @@ docker commit colossal_env registry.cn-beijing.aliyuncs.com/sg-gie/colossalai:0.
 ## Chat环境搭建
 * 安装chat环境
 ```
-# 进入容器
+#进入容器
 docker exec -it colossal_env bash
 cd /workspace
 git clone https://github.com/hpcaitech/ColossalAI.git
@@ -149,7 +150,7 @@ from coati.models import convert_to_lora_module
 ```
 * RM加载数据集
 ```
-# 需要提前处理一下,更改下train_reward_model.py
+#需要提前处理一下,更改下train_reward_model.py
 
 
 ```
