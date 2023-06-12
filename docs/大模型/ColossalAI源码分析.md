@@ -135,24 +135,24 @@ pip install .
 ## 源码解析
 * [Chat源码地址](https://github.com/hpcaitech/ColossalAI/tree/main/applications/Chat) 截止实际时间20230612
 
-```
+```shell
 cd /workspace/ColossalAI/applications/Chat/examples/
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 * 训练策略     
-```
+```python
 from coati.trainer.strategies import ColossalAIStrategy, DDPStrategy, NaiveStrategy
 ```
 
 * 转为lora模型   
-```
+```python
 from coati.models import convert_to_lora_module
 ```
 
 * RM加载数据集   
-```
-#需要提前处理一下,更改下train_reward_model.py
+```python
+# 需要提前处理一下,更改下train_reward_model.py
 ```
 
 ### 资料
