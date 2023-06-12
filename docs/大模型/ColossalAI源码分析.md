@@ -4,7 +4,7 @@ sort: 4
 # 环境配置
 
 * ![镜像下载](https://note.youdao.com/yws/api/personal/file/WEB386ef86df22f59c31dd7847ea71e8c79?method=download&shareKey=0a1ccc7142b789db2d98ca350aa84568)
-    * [docker-hub地址](https://hub.docker.com/r/hpcaitech/colossalai)
+* [docker-hub地址](https://hub.docker.com/r/hpcaitech/colossalai)
     
 ## 容器环境配置
 * [有道云链接](https://note.youdao.com/s/SyuVJga)
