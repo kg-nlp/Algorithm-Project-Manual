@@ -1,7 +1,7 @@
 # 算法开发手册
 
 
-本开发文档由以下几部分组成
+本开发文档由以下几部分组成-不定期更新内容
 
 
 * [大模型](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/)
@@ -22,11 +22,3 @@
 * [检索系统](https://kg-nlp.github.io/Algorithm-Project-Manual/检索系统/)
 * [推荐系统](https://kg-nlp.github.io/Algorithm-Project-Manual/推荐系统/)
 * [知识图谱](https://kg-nlp.github.io/Algorithm-Project-Manual/知识图谱/)   
-
-
-
-
-
-
-参考 [GitHub page搭建方法](https://zhuanlan.zhihu.com/p/323457078)
-* 先搭建 kg-nlp.github.io 站点
