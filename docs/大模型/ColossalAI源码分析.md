@@ -137,22 +137,20 @@ pip install .
 cd /workspace/ColossalAI/applications/Chat/examples/
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+
 * 训练策略
 ```
 from coati.trainer.strategies import ColossalAIStrategy, DDPStrategy, NaiveStrategy
-
-
 ```
+
 * 转为lora模型
 ```
 from coati.models import convert_to_lora_module
-
 ```
+
 * RM加载数据集
 ```
 #需要提前处理一下,更改下train_reward_model.py
-
-
 ```
 
 ## 资料
