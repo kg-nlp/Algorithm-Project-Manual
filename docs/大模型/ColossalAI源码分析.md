@@ -3,6 +3,8 @@ sort: 4
 ---
 # ColossalAI源码分析
 
+[算法开发手册](https://kg-nlp.github.io/Algorithm-Project-Manual/%E5%A4%A7%E6%A8%A1%E5%9E%8B/ColossalAI%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90.html)
+
 ## 环境配置
 
 * ![镜像下载](https://note.youdao.com/yws/api/personal/file/WEB386ef86df22f59c31dd7847ea71e8c79?method=download&shareKey=0a1ccc7142b789db2d98ca350aa84568)
@@ -188,7 +190,6 @@ args.strategy == 'colossalai_gemini'
 ```python
 from coati.models import convert_to_lora_module
 ```
-
 ```python
 # 大模型的参数被固定，只有低秩矩阵参数被调整
 def convert_to_lora_module(module: nn.Module, lora_rank: int, lora_train_bias: str = 'none') -> nn.Module:
@@ -208,8 +209,8 @@ def convert_to_lora_module(module: nn.Module, lora_rank: int, lora_train_bias: s
     return module
 ```
 
-* 启动脚本
 
+* 启动脚本
 ```sh
 #!/usr/bin/env bash
 torchrun --standalone --nproc_per_node=4 train_sft.py \
