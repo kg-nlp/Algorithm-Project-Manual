@@ -229,9 +229,9 @@ torchrun --standalone --nproc_per_node=4 train_sft.py \
 # 更改train_reward_model.py 中数据加载的代码
 # 原代码:
 if args.subset is not None:
-  data = load_dataset(args.dataset, data_dir=args.subset)
+    data = load_dataset(args.dataset, data_dir=args.subset)
 else:
-  data = load_dataset(args.dataset)
+    data = load_dataset(args.dataset)
 # 更改后:
 if 'rm-static' in args.dataset or 'hh-rlhf' in args.dataset:
     data = load_dataset("parquet", data_files={'train': os.path.join(args.dataset,'train.parquet'), 'test': os.path.join(args.dataset,'test.parquet')})
@@ -245,6 +245,8 @@ parser.add_argument('--dataset',
                 default='Dahoas/rm-static')
 # 原始代码限定了choices,为了加载自定义数据集,将choices注释掉
 ```
+
+
 ```python
 # 为了测试ColossalAI训练流程,本次不加载全量数据
 # 设置args.test == True
