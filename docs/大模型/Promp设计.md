@@ -190,7 +190,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
 
 输出 JSON：{"English_summary": "Brother and sister Jack and Jill went to fetch water from a mountaintop well in a charming village. While singing joyfully and climbing up, they unfortunately stumbled on a rock and tumbled down the hill, with Jill following Jack. Despite some minor injuries, they made it back to their cozy home. Nevertheless, their spirit of adventure remained undiminished as they continued to explore with joy.", "num_names": 2}
 ```
-##### eg.6 指导模型解决方案并比较 
+###### eg.6 指导模型解决方案并比较 
 ```
 解析下面"""括起来的问题，并判断学生的解决方案是否正确，解析步骤如下：
 
@@ -244,7 +244,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
 
 学生的成绩：不正确
 ```
-##### eg.7 局限性
+###### eg.7 局限性
 ```
 告诉我 Boie 公司生产的 AeroGlide UltraSlim Smart Toothbrush 的相关信息。
 如果该公司没有生产这款产品，请给出引用说明。
@@ -337,7 +337,7 @@ Boie 公司确实生产了一系列口腔护理产品，包括牙刷、牙膏和
 座椅泡沫密度|中等（1.8磅/立方英尺）或高（2.8磅/立方英尺|
 
 #### 1.1.3 文本概括
-参考 上一节eg.5 将一个任务拆开几步去解决
+##### 参考 上一节eg.5 将一个任务拆开几步去解决
 ```
 解析下面"""括起来的文本。
 1.用一句话概括文本，最多30个词汇，侧重产品价格和质量。
