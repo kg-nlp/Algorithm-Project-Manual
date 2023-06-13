@@ -138,6 +138,8 @@ pip install .
 
 ### 监督质量微调
 > 使用前面提到的数据集执行有监督指令微调，以微调模型
+  
+  
 ```sh
 cd /workspace/ColossalAI/applications/Chat/examples/
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
@@ -222,10 +224,12 @@ torchrun --standalone --nproc_per_node=4 train_sft.py \
     --max_datasets_size 500 \
     --max_epochs 1 \
 ```
-### 训练奖励模型  
+### 训练奖励模型
+  
 > 训练奖励模型，通过手动对同一提示的不同输出进行排序来分配相应的分数，然后有监督奖励模型的训练。
 
 * RM加载数据集     
+
 ```python
 # 原始数据集anthropic-hh-rlhf和rm-static的格式都为parquet
 # 更改train_reward_model.py 中数据加载的代码
@@ -247,7 +251,7 @@ parser.add_argument('--dataset',
                 default='Dahoas/rm-static')
 # 原始代码限定了choices,为了加载自定义数据集,将choices注释掉
 ```
-
+ 
   
 ```python
 # 为了测试ColossalAI训练流程,本次不加载全量数据
@@ -262,7 +266,8 @@ else:
 ```  
 
 * 启动脚本    
-```sh
+ 
+```sh 
 set_n_least_used_CUDA_VISIBLE_DEVICES() {
     local n=${1:-"9999"}
     echo "GPU Memory Usage:"
@@ -291,9 +296,13 @@ torchrun --standalone --nproc_per_node=2 train_reward_model.py \
 ```  
   
 ### 基于人类反馈的强化学习训练模型  
+
+
 > 在第一阶段的监督微调模型和第二阶段的奖励模型的基础上，使用强化学习算法进一步训练大型语言模型。该阶段是RLHF训练的核心部分，在强化学习中使用近端策略优化（PPO）算法来引入奖励信号，并生成更符合人类偏好的内容。
 
 ![训练流程](https://raw.githubusercontent.com/hpcaitech/public_assets/main/applications/chat/stage-3.jpeg)
+
+
 > 在PPO部分，ColossalChat遵循两个阶段的过程：首先，构造实验阶段，它使用SFT（有监督微调）、Actor、RM（奖励模型）和Critic模型来计算生成的实验并将其存储在经验回放缓冲区中。然后是参数更新阶段，使用经验计算策略损失和价值损失。
 
 > 在PTX部分，ColossalChat计算Actor的输出响应和输入语料库的响应部分之间的交叉熵损失。这种损失用于将预训练梯度添加到PPO梯度中，以保持语言模型的原始性能并防止遗忘。最后，总结了策略损失、价值损失和PTX损失，用于反向传播和参数更新。
@@ -301,12 +310,14 @@ torchrun --standalone --nproc_per_node=2 train_reward_model.py \
 
    
 * 数据集  
+
 ```  
 Pretrain dataset 使用第一阶段数据
 Prompt dataset 可以使用第一阶段数据,也可以使用examples下的脚本generate_prompt_dataset.py生成部分prompt
 ```
 
-* 启动脚本  
+* 启动脚本 
+
 ```sh
 set_n_least_used_CUDA_VISIBLE_DEVICES() {
     local n=${1:-"9999"}
@@ -339,8 +350,11 @@ torchrun --standalone --nproc_per_node=4 train_prompts.py \
 
 
 ### 资料
+
 [中文教程](https://colossalai.org/zh-Hans/docs/get_started/installation/)
+
 #### PPO详解
+
 * [trl](https://github.com/lvwerra/trl)& [huggingface文档](https://huggingface.co/docs/trl/index)的ppo算法,已集成在了transformers中,大致过程如下:
     * rollout: 语言模型生成回复或是生成query之后的token序列
     * evaluation: 对query和响应通过函数,模型,人工反馈等操作进行评估,每一对都要有一个结果
@@ -349,24 +363,30 @@ torchrun --standalone --nproc_per_node=4 train_prompts.py \
     ![详细流程图](https://note.youdao.com/yws/api/personal/file/WEB9db34c99ec6c971798a72b744d3ded86?method=download&shareKey=7028569247d53a04a3dd8d397e1f7c45)
     
 #### ColossalAI优势
+
 * 系统性能优化与开发加速
+
 ```
 ColossalChat 能够快速跟进 ChatGPT 完整 RLHF 流程复现，离不开 AI 大模型基础设施 Colossal-AI 及相关优化技术的底座支持，相同条件下训练速度相比 Alpaca 采用的 FSDP(Fully Sharded Data Parallel) 可提升两倍以上。
 ```
 
 * 减少内存冗余的 ZeRO + Gemini
+
 ```
 Colossal-AI 支持使用无冗余优化器 (ZeRO) 提高内存使用效率，低成本容纳更大模型，同时不影响计算粒度和通信效率。自动 Chunk 机制可以进一步提升 ZeRO 的性能，提高内存使用效率，减少通信次数并避免内存碎片。异构内存空间管理器 Gemini 支持将优化器状态从 GPU 显存卸载到 CPU 内存或硬盘空间，以突破 GPU 显存容量限制，扩展可训练模型的规模，降低 AI 大模型应用成本。
 ```
 * 使用 LoRA 低成本微调
+
 ```
 Colossal-AI 支持使用低秩矩阵微调（LoRA）方法，对 AI 大模型进行低成本微调。LoRA 方法认为大语言模型是过参数化的，而在微调时，参数改变量是一个低秩矩阵。因此，可以将这个矩阵分解为两个更小的矩阵的乘积。在微调过程中，大模型的参数被固定，只有低秩矩阵参数被调整，从而显著减小了训练所需的参数量，并降低成本。 低成本量化推理
 ```
 * 量化推理
+
 ```   
 为降低推理部署成本，Colossal-AI 使用 GPTQ 4bit 量化推理。在 GPT/OPT/BLOOM类模型上，它比传统的RTN(rount-to-nearest) 量化技术能够获得更好的 Perplexity效果。相比常见的 FP16推理，它可将显存消耗降低75%，只损失极少量的吞吐速度与Perplexity 性能。 以 ColossalChat-7B 为例，在使用 4bit 量化推理时，70亿参数模型仅需大约 4GB 显存即可完成短序列（生成长度为 128）推理，在普通消费级显卡上即可完成
 ```
 ## 其他
+
 [参考MedicalGPT](https://github.com/shibing624/MedicalGPT)
 ![GPT-4训练流程](https://github.com/shibing624/MedicalGPT/raw/main/docs/GPT_Training.jpg)
 * 第一阶段：PT(Continue PreTraining)增量预训练，在海量领域文档数据上二次预训练GPT模型，以注入领域知识
