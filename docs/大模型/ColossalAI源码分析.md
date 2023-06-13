@@ -231,6 +231,7 @@ torchrun --standalone --nproc_per_node=4 train_sft.py \
 * RM加载数据集     
 
 ```python
+
 # 原始数据集anthropic-hh-rlhf和rm-static的格式都为parquet
 # 更改train_reward_model.py 中数据加载的代码
 # 原代码:
@@ -254,6 +255,7 @@ parser.add_argument('--dataset',
  
   
 ```python
+
 # 为了测试ColossalAI训练流程,本次不加载全量数据
 # 设置args.test == True
 # 更改测试数据范围
@@ -360,6 +362,7 @@ torchrun --standalone --nproc_per_node=4 train_prompts.py \
     * evaluation: 对query和响应通过函数,模型,人工反馈等操作进行评估,每一对都要有一个结果
     * optimization: 在优化步骤中，计算query和response序列对数概率。通过训练的模型和参考模型完成，参考模型通常是在微调之前预训练的模型。两个输出之间的kl散度被用作额外的奖励信号，以确保生成的响应不会偏离参考语言模型太远。然后使用PPO对active语言模型进行训练
     ![流程图](https://camo.githubusercontent.com/85d00cf9bca67e33c2d1270b51ff1ac01853b26a8d6bb226b711f859d065b4a6/68747470733a2f2f68756767696e67666163652e636f2f64617461736574732f74726c2d696e7465726e616c2d74657374696e672f6578616d706c652d696d616765732f7265736f6c76652f6d61696e2f696d616765732f74726c5f6f766572766965772e706e67)
+    
     ![详细流程图](https://note.youdao.com/yws/api/personal/file/WEB9db34c99ec6c971798a72b744d3ded86?method=download&shareKey=7028569247d53a04a3dd8d397e1f7c45)
     
 #### ColossalAI优势
