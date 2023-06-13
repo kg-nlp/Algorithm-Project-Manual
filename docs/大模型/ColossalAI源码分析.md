@@ -11,7 +11,7 @@ sort: 4
 ### 容器环境配置
 * [有道云链接](https://note.youdao.com/s/SyuVJga)
 
-```shell
+```sh
 # 拉取最新的镜像
 docker pull hpcaitech/colossalai:0.3.0  
 # 启动镜像
@@ -66,7 +66,7 @@ docker commit colossal_env registry.cn-beijing.aliyuncs.com/sg-gie/colossalai:0.
 *  与HuggingFace生成集成,模型自由定制
 ### Chat环境搭建
 * 安装chat环境
-```shell
+```sh
 # 进入容器
 docker exec -it colossal_env bash
 cd /workspace
@@ -75,7 +75,7 @@ cd ColossalAI/applications/Chat
 pip install -r requirements.txt 
 ```
 * 安装Transformers环境
-```shell
+```sh
 cd /workspace
 git clone https://github.com/hpcaitech/transformers
 cd transformers
@@ -138,7 +138,7 @@ pip install .
 
 ### 监督质量微调
 > 使用前面提到的数据集执行有监督指令微调，以微调模型
-```shell
+```sh
 cd /workspace/ColossalAI/applications/Chat/examples/
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
@@ -204,8 +204,10 @@ def convert_to_lora_module(module: nn.Module, lora_rank: int, lora_train_bias: s
     lora.mark_only_lora_as_trainable(module, lora_train_bias)
     return module
 ```
+
+
 * 启动脚本
-```shell
+```sh
 #!/usr/bin/env bash
 torchrun --standalone --nproc_per_node=4 train_sft.py \
     --pretrain "/workspace/ColossalAI/LLM/llama-7b-hf" \
@@ -224,7 +226,7 @@ torchrun --standalone --nproc_per_node=4 train_sft.py \
 > 训练奖励模型，通过手动对同一提示的不同输出进行排序来分配相应的分数，然后有监督奖励模型的训练。
 
 * RM加载数据集     
-```python  
+```python
 # 原始数据集anthropic-hh-rlhf和rm-static的格式都为parquet
 # 更改train_reward_model.py 中数据加载的代码
 # 原代码:
@@ -247,7 +249,7 @@ parser.add_argument('--dataset',
 ```
 
   
-```python  
+```python
 # 为了测试ColossalAI训练流程,本次不加载全量数据
 # 设置args.test == True
 # 更改测试数据范围
@@ -260,7 +262,7 @@ else:
 ```  
 
 * 启动脚本    
-```shell  
+```sh
 set_n_least_used_CUDA_VISIBLE_DEVICES() {
     local n=${1:-"9999"}
     echo "GPU Memory Usage:"
@@ -305,7 +307,7 @@ Prompt dataset 可以使用第一阶段数据,也可以使用examples下的脚�
 ```
 
 * 启动脚本  
-```shell  
+```sh
 set_n_least_used_CUDA_VISIBLE_DEVICES() {
     local n=${1:-"9999"}
     echo "GPU Memory Usage:"
