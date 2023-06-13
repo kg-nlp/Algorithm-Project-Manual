@@ -220,11 +220,11 @@ torchrun --standalone --nproc_per_node=4 train_sft.py \
     --max_datasets_size 500 \
     --max_epochs 1 \
 ```
-### 训练奖励模型
+### 训练奖励模型  
 > 训练奖励模型，通过手动对同一提示的不同输出进行排序来分配相应的分数，然后有监督奖励模型的训练。
 
-* RM加载数据集   
-```python
+* RM加载数据集     
+```python  
 # 原始数据集anthropic-hh-rlhf和rm-static的格式都为parquet
 # 更改train_reward_model.py 中数据加载的代码
 # 原代码:
@@ -246,8 +246,8 @@ parser.add_argument('--dataset',
 # 原始代码限定了choices,为了加载自定义数据集,将choices注释掉
 ```
 
-
-```python
+  
+```python  
 # 为了测试ColossalAI训练流程,本次不加载全量数据
 # 设置args.test == True
 # 更改测试数据范围
@@ -257,10 +257,10 @@ if args.test:
 else:
     train_data = data['train']
     eval_data = data['test']
-```
+```  
 
-* 启动脚本
-```shell
+* 启动脚本    
+```shell  
 set_n_least_used_CUDA_VISIBLE_DEVICES() {
     local n=${1:-"9999"}
     echo "GPU Memory Usage:"
@@ -286,8 +286,9 @@ torchrun --standalone --nproc_per_node=2 train_reward_model.py \
    --save_path /workspace/ColossalAI/Saved/Coati-7B-rw.pt \
    --dataset '/workspace/ColossalAI/data/anthropic-hh-rlhf' \
    --test True
-```
-### 基于人类反馈的强化学习训练模型
+```  
+  
+### 基于人类反馈的强化学习训练模型  
 > 在第一阶段的监督微调模型和第二阶段的奖励模型的基础上，使用强化学习算法进一步训练大型语言模型。该阶段是RLHF训练的核心部分，在强化学习中使用近端策略优化（PPO）算法来引入奖励信号，并生成更符合人类偏好的内容。
 
 ![训练流程](https://raw.githubusercontent.com/hpcaitech/public_assets/main/applications/chat/stage-3.jpeg)
@@ -296,15 +297,15 @@ torchrun --standalone --nproc_per_node=2 train_reward_model.py \
 > 在PTX部分，ColossalChat计算Actor的输出响应和输入语料库的响应部分之间的交叉熵损失。这种损失用于将预训练梯度添加到PPO梯度中，以保持语言模型的原始性能并防止遗忘。最后，总结了策略损失、价值损失和PTX损失，用于反向传播和参数更新。
 
 
-
-* 数据集
-```
+   
+* 数据集  
+```  
 Pretrain dataset 使用第一阶段数据
 Prompt dataset 可以使用第一阶段数据,也可以使用examples下的脚本generate_prompt_dataset.py生成部分prompt
 ```
 
-* 启动脚本
-```shell
+* 启动脚本  
+```shell  
 set_n_least_used_CUDA_VISIBLE_DEVICES() {
     local n=${1:-"9999"}
     echo "GPU Memory Usage:"
@@ -332,7 +333,7 @@ torchrun --standalone --nproc_per_node=4 train_prompts.py \
     --model 'llama' \
     --rm_pretrain /workspace/ColossalAI/Saved/Coati-7B-sft \
     --rm_path /workspace/ColossalAI/Saved/Coati-7B-rw.pt
-```
+```  
 
 
 ### 资料
