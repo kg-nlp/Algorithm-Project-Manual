@@ -188,6 +188,7 @@ args.strategy == 'colossalai_gemini'
 ```python
 from coati.models import convert_to_lora_module
 ```
+
 ```python
 # 大模型的参数被固定，只有低秩矩阵参数被调整
 def convert_to_lora_module(module: nn.Module, lora_rank: int, lora_train_bias: str = 'none') -> nn.Module:
@@ -207,8 +208,8 @@ def convert_to_lora_module(module: nn.Module, lora_rank: int, lora_train_bias: s
     return module
 ```
 
-
 * 启动脚本
+
 ```sh
 #!/usr/bin/env bash
 torchrun --standalone --nproc_per_node=4 train_sft.py \
