@@ -62,7 +62,8 @@ docker commit colossal_env registry.cn-beijing.aliyuncs.com/sg-gie/colossalai:0.
 
 ### 官方chat训练流程
 
-[知乎参考资料](https://www.zhihu.com/tardis/zm/art/618048558?source_id=1005)
+[ColossalChat：完整RLHF平替ChatGPT的开源方案](https://www.zhihu.com/tardis/zm/art/618048558?source_id=1005)
+
 ![流程图](https://raw.githubusercontent.com/hpcaitech/public_assets/main/applications/chatgpt/chatgpt.png)
 
 *   支持全面的大型模型训练加速能力的ColossalAI，不需要复杂的分布式训练算法的知识
@@ -195,8 +196,8 @@ class ColossalAIStrategy(DDPStrategy):
         hysteresis(int): The hysteresis for the optimizer.  动态 loss scaling 的延迟偏移
         min_scale(float): The minimum scale for the optimizer.  loss scale 的最小允许值
         max_scale(float): The maximum scale for the optimizer.  loss scale 的最大允许值
-        max_norm(float): The maximum norm for the optimizer.  梯度正则策略
-        norm_type(float): The norm type for the optimizer.  正则类型
+        max_norm(float): The maximum norm for the optimizer.  
+        norm_type(float): The norm type for the optimizer.  
 ```
 
 ```python
@@ -473,6 +474,7 @@ torchrun --standalone --nproc_per_node=4 train_prompts.py \
 
 #### 微调资源
 
+
 |方法|资源|
 |---|---|
 |使用Alpaca-Lora基于LLaMA(7B)进行微调|单卡A100 3epoch 3h<br>显存占用57G,3h<br>多卡(8)A100 3epoch 20min<br>推理：9G|
@@ -483,7 +485,7 @@ torchrun --standalone --nproc_per_node=4 train_prompts.py \
 |使用P-Tuningv2对ChatGLM-6B进行参数高效微调|训练显存占用：单卡，约6G,2h|
 |vicuna-13b|训练显存占用：双卡，约143G|
 |LoRA微调LLaMA 65B|微调LLaMA 650B:8卡A100,628G<br>推理：67G|
-|中文LLaMA&Alpaca微调|预训练第一阶段：8*A100, 训练embedding<br>预训练第二阶段：16*A100使用lora为模型添加权重<br>指令精调：16*A100|
+|中文LLaMA&Alpaca微调|预训练第一阶段：8\*A100, 训练embedding<br>预训练第二阶段：16\*A100使用lora为模型添加权重<br>指令精调：16*A100|
 
 
 #### 测试过程问题
@@ -555,8 +557,13 @@ rl训练: 10000,13500,10000,10000
     *   rollout: 语言模型生成回复或是生成query之后的token序列
     *   evaluation: 对query和响应通过函数,模型,人工反馈等操作进行评估,每一对都要有一个结果
     *   optimization: 在优化步骤中，计算query和response序列对数概率。通过训练的模型和参考模型完成，参考模型通常是在微调之前预训练的模型。两个输出之间的kl散度被用作额外的奖励信号，以确保生成的响应不会偏离参考语言模型太远。然后使用PPO对active语言模型进行训练
-        ![流程图](https://camo.githubusercontent.com/85d00cf9bca67e33c2d1270b51ff1ac01853b26a8d6bb226b711f859d065b4a6/68747470733a2f2f68756767696e67666163652e636f2f64617461736574732f74726c2d696e7465726e616c2d74657374696e672f6578616d706c652d696d616765732f7265736f6c76652f6d61696e2f696d616765732f74726c5f6f766572766965772e706e67)
-        ![详细流程图](https://note.youdao.com/yws/api/personal/file/WEB9db34c99ec6c971798a72b744d3ded86?method=download\&shareKey=7028569247d53a04a3dd8d397e1f7c45)
+    
+    
+    ![流程图](https://camo.githubusercontent.com/85d00cf9bca67e33c2d1270b51ff1ac01853b26a8d6bb226b711f859d065b4a6/68747470733a2f2f68756767696e67666163652e636f2f64617461736574732f74726c2d696e7465726e616c2d74657374696e672f6578616d706c652d696d616765732f7265736f6c76652f6d61696e2f696d616765732f74726c5f6f766572766965772e706e67)
+    
+    [ChatGPT复现之路](https://wqw547243068.github.io/chatgpt_mimic)
+
+    ![详细流程图](https://note.youdao.com/yws/api/personal/file/WEB9db34c99ec6c971798a72b744d3ded86?method=download\&shareKey=7028569247d53a04a3dd8d397e1f7c45)
 
 * [强化学习7-PPO(Agent-only) 逐行代码讲解](https://zhuanlan.zhihu.com/p/624797778)  还未看懂
 * [B站视频](https://www.bilibili.com/video/BV1yP4y1X7xF/?p=12)
