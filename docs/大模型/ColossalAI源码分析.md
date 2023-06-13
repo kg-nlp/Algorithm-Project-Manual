@@ -1,6 +1,6 @@
-***
-
-## sort: 4
+---
+sort: 4
+---
 
 # ColossalAI源码分析
 
@@ -363,7 +363,7 @@ torchrun --standalone --nproc_per_node=4 train_prompts.py \
     --pretrain /workspace/ColossalAI/Saved/Coati-7B-sft \
     --model 'llama' \
     --rm_pretrain /workspace/ColossalAI/Saved/Coati-7B-sft \
-    --rm_path /workspace/ColossalAI/Saved/Coati-7B-rw.pt
+    --rm_path /workspace/ColossalAI/Saved/Coati-7B-rw.pt 
 ```
 
 ### 资料
@@ -377,7 +377,7 @@ torchrun --standalone --nproc_per_node=4 train_prompts.py \
     *   evaluation: 对query和响应通过函数,模型,人工反馈等操作进行评估,每一对都要有一个结果
     *   optimization: 在优化步骤中，计算query和response序列对数概率。通过训练的模型和参考模型完成，参考模型通常是在微调之前预训练的模型。两个输出之间的kl散度被用作额外的奖励信号，以确保生成的响应不会偏离参考语言模型太远。然后使用PPO对active语言模型进行训练
         ![流程图](https://camo.githubusercontent.com/85d00cf9bca67e33c2d1270b51ff1ac01853b26a8d6bb226b711f859d065b4a6/68747470733a2f2f68756767696e67666163652e636f2f64617461736574732f74726c2d696e7465726e616c2d74657374696e672f6578616d706c652d696d616765732f7265736f6c76652f6d61696e2f696d616765732f74726c5f6f766572766965772e706e67)
-    ![详细流程图](https://note.youdao.com/yws/api/personal/file/WEB9db34c99ec6c971798a72b744d3ded86?method=download\&shareKey=7028569247d53a04a3dd8d397e1f7c45)
+        ![详细流程图](https://note.youdao.com/yws/api/personal/file/WEB9db34c99ec6c971798a72b744d3ded86?method=download\&shareKey=7028569247d53a04a3dd8d397e1f7c45)
 
 #### ColossalAI优势
 
@@ -410,11 +410,11 @@ Colossal-AI 支持使用低秩矩阵微调（LoRA）方法，对 AI 大模型进
 [参考MedicalGPT](https://github.com/shibing624/MedicalGPT)
 ![GPT-4训练流程](https://github.com/shibing624/MedicalGPT/raw/main/docs/GPT_Training.jpg)
 
-*   第一阶段：PT(Continue PreTraining)增量预训练，在海量领域文档数据上二次预训练GPT模型，以注入领域知识
+*   第一阶段：PT(Continue PreTraining)增量预训练，在海量领域文档数据上二次预训练GPT模型，以注入领域知识 &#x20;
 
-*   第二阶段：SFT(Supervised Fine-tuning)有监督微调，构造指令微调数据集，在预训练模型基础上做指令精调，以对齐指令意图
+*   第二阶段：SFT(Supervised Fine-tuning)有监督微调，构造指令微调数据集，在预训练模型基础上做指令精调，以对齐指令意图 &#x20;
 
-*   第三阶段：RM(Reward Model)奖励模型建模，构造人类偏好排序数据集，训练奖励模型，用来对齐人类偏好，主要是"HHH"原则，具体是"helpful, honest, harmless"
+*   第三阶段：RM(Reward Model)奖励模型建模，构造人类偏好排序数据集，训练奖励模型，用来对齐人类偏好，主要是"HHH"原则，具体是"helpful, honest, harmless" &#x20;
 
-*   第四阶段：RL(Reinforcement Learning)基于人类反馈的强化学习(RLHF)，用奖励模型来训练SFT模型，生成模型使用奖励或惩罚来更新其策略，以便生成更高质量、更符合人类偏好的文本
+*   第四阶段：RL(Reinforcement Learning)基于人类反馈的强化学习(RLHF)，用奖励模型来训练SFT模型，生成模型使用奖励或惩罚来更新其策略，以便生成更高质量、更符合人类偏好的文本 &#x20;
 

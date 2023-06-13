@@ -3,6 +3,7 @@
 
 本开发文档由以下几部分组成-不定期更新内容
 
+[知乎链接](https://www.zhihu.com/people/zhangyj-n)
 
 * [大模型](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/)
 * [多模态](https://kg-nlp.github.io/Algorithm-Project-Manual/多模态/)
