@@ -4,6 +4,10 @@ sort: 6
 
 # MedicalGPT源码阅读  
 
+[算法开发手册](https://kg-nlp.github.io/Algorithm-Project-Manual/%E5%A4%A7%E6%A8%A1%E5%9E%8B/MedicalGPT%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB.html)
+[知乎](https://zhuanlan.zhihu.com/p/637090041)
+
+
 > 截止0614   
 
 
@@ -129,6 +133,50 @@ reward_tokenizer = tokenizer_class.from_pretrained(
 ```
 
 > 后续的监督,奖励,强化可以参考作者后续的代码,写的即清洗又简洁
+
+* 训练脚本稍稍修改
+
+```bash
+#其余参数默认
+#!/usr/bin/env bash
+CUDA_VISIBLE_DEVICES=1,2 torchrun --nproc_per_node 2 pretraining.py \
+    --model_type bloom \
+    --model_name_or_path /workspace/ColossalAI/LLM/bloom-560m \
+    --train_file_dir ../data/pretrain \
+    --validation_file_dir ../data/pretrain \
+    --per_device_train_batch_size 1 \
+    --per_device_eval_batch_size 1 \
+    --do_train \
+    --do_eval \
+    --use_peft True \
+    --output_dir outputs-pt-v1 \
+
+#!/usr/bin/env bash
+CUDA_VISIBLE_DEVICES=1,2 torchrun --nproc_per_node 2 supervised_finetuning.py \
+    --model_type bloom \
+    --model_name_or_path outputs-pt-v1 \
+    --train_file_dir ../data/finetune \
+    --validation_file_dir ../data/finetune \
+    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 4 \
+    --output_dir outputs-sft-v1 \
+    
+#!/usr/bin/env bash
+CUDA_VISIBLE_DEVICES=1,2 python reward_modeling.py \
+    --model_type bloom \
+    --model_name_or_path outputs-sft-v1 \
+    --train_file_dir ../data/reward \
+    --validation_file_dir ../data/reward \
+    --output_dir outputs-rm-v1 \
+
+#!/usr/bin/env bash
+CUDA_VISIBLE_DEVICES=1,2 torchrun --nproc_per_node 2 rl_training.py \
+    --model_type bloom \
+    --model_name_or_path outputs-sft-v1 \
+    --reward_model_name_or_path outputs-rm-v1 \
+    --torch_dtype float16 \
+    --output_dir outputs-rl-v1 \
+```
 
 
 * 关于LoRA Training
