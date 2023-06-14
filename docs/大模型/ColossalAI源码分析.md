@@ -563,8 +563,10 @@ rl训练: 10000,13500,10000,10000
     
     [ChatGPT复现之路](https://wqw547243068.github.io/chatgpt_mimic)
 
-    ![详细流程图](https://note.youdao.com/yws/api/personal/file/WEB9db34c99ec6c971798a72b744d3ded86?method=download\&shareKey=7028569247d53a04a3dd8d397e1f7c45)
+   ![详细流程图](https://note.youdao.com/yws/api/personal/file/WEB9db34c99ec6c971798a72b744d3ded86?method=download\&shareKey=7028569247d53a04a3dd8d397e1f7c45) 
 
+    
+    
 * [强化学习7-PPO(Agent-only) 逐行代码讲解](https://zhuanlan.zhihu.com/p/624797778)  还未看懂
 * [B站视频](https://www.bilibili.com/video/BV1yP4y1X7xF/?p=12)
 
