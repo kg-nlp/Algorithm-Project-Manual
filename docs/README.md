@@ -5,7 +5,12 @@
 
 [知乎链接](https://www.zhihu.com/people/zhangyj-n)
 
+## 正在更新
+
 * [大模型](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/)
+
+## 等待迁移
+
 * [多模态](https://kg-nlp.github.io/Algorithm-Project-Manual/多模态/)
 * [可解释性](https://kg-nlp.github.io/Algorithm-Project-Manual/可解释性/)
 * [信息抽取](https://kg-nlp.github.io/Algorithm-Project-Manual/信息抽取/)
