@@ -11,3 +11,5 @@ sort: 1
 * [并行计算论文](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/并行计算论文.html)
 * [ColossalAI源码分析](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/ColossalAI源码分析.html) 
 * [LLM综述](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/LLM综述.html) 
+* [MedicalGPT源码阅读](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/MedicalGPT源码阅读.html) 
+* [ChatGLM工程分析](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/ChatGLM工程分析.html) 
