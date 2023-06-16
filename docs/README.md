@@ -8,11 +8,11 @@
 ## 正在更新
 
 * [大模型](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/)
+* [可解释性](https://kg-nlp.github.io/Algorithm-Project-Manual/可解释性/)
 
 ## 等待迁移
 
 * [多模态](https://kg-nlp.github.io/Algorithm-Project-Manual/多模态/)
-* [可解释性](https://kg-nlp.github.io/Algorithm-Project-Manual/可解释性/)
 * [信息抽取](https://kg-nlp.github.io/Algorithm-Project-Manual/信息抽取/)
 * [数据分析](https://kg-nlp.github.io/Algorithm-Project-Manual/数据分析/)
 * [机器学习](https://kg-nlp.github.io/Algorithm-Project-Manual/机器学习/)
@@ -24,7 +24,8 @@
 * [文本分类](https://kg-nlp.github.io/Algorithm-Project-Manual/文本分类/)
 * [文本生成](https://kg-nlp.github.io/Algorithm-Project-Manual/文本生成/)
 * [文本匹配](https://kg-nlp.github.io/Algorithm-Project-Manual/文本匹配/)
-* [文本匹配](https://kg-nlp.github.io/Algorithm-Project-Manual/文本匹配/)
 * [检索系统](https://kg-nlp.github.io/Algorithm-Project-Manual/检索系统/)
 * [推荐系统](https://kg-nlp.github.io/Algorithm-Project-Manual/推荐系统/)
 * [知识图谱](https://kg-nlp.github.io/Algorithm-Project-Manual/知识图谱/)   
+* [机构学](https://kg-nlp.github.io/Algorithm-Project-Manual/机构学/)
+* [建筑领域](https://kg-nlp.github.io/Algorithm-Project-Manual/建筑领域/)
