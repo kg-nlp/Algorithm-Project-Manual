@@ -295,6 +295,15 @@ python merge_peft_adapter.py \
 
 ## 作者关于大模型的一些思考答疑
 
+* 什么情况用Bert模型，什么情况用LLaMA、ChatGLM类大模型
+    * 1）NLU相关的任务，用BERT模型能处理的很好，如实体识别、信息抽取、文本分类，没必要上大模型；
+    * 2）NLG任务，纯中文任务，用ChatGLM-6B，需要处理中英文任务，用 chinese-llama-plus-7b 或者 chinese-alpaca-plus-7b-hf 
+* ChatGLM-6B与LLaMA-7B的区别
+    *  chatGLM-6B是用的GLM模型结构，prefix LM，它的attentionmask部分，prefix部分的token是互相能看到，模型设计之初考虑NLU任务和NLG任务。
+    *  LLaMA-7B是GPT模型结构，causal LM，它的attention mask部分，只有后面的token能看到前面的token，单向的从左到右，decoder only。
+* 微调需要多少条数据
+    *  取决于预训练数据和微调任务的数据分布是否一致，分布一致，100条就够，分布差异大就需要多些数据，千条或者万条以上为佳。自己的任务复杂或者下游任务行业比较冷门，如药品名称识别任务，则需要较多监督数据。还有微调大模型时，一遍是记不住的。100条的微调数据，epochs=20才能稳定拟合任务要求。
+
 ## 参考
 
 [MedicalGPT](https://github.com/shibing624/MedicalGPT)
