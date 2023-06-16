@@ -9,7 +9,8 @@
 
 * [大模型](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/)
 * [可解释性](https://kg-nlp.github.io/Algorithm-Project-Manual/可解释性/)
-
+* [建筑领域](https://kg-nlp.github.io/Algorithm-Project-Manual/建筑领域/)
+   
 ## 等待迁移
 
 * [多模态](https://kg-nlp.github.io/Algorithm-Project-Manual/多模态/)
@@ -28,4 +29,3 @@
 * [推荐系统](https://kg-nlp.github.io/Algorithm-Project-Manual/推荐系统/)
 * [知识图谱](https://kg-nlp.github.io/Algorithm-Project-Manual/知识图谱/)   
 * [机构学](https://kg-nlp.github.io/Algorithm-Project-Manual/机构学/)
-* [建筑领域](https://kg-nlp.github.io/Algorithm-Project-Manual/建筑领域/)
