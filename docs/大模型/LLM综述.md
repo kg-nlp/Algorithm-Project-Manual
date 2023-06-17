@@ -164,6 +164,8 @@ sort: 5
     * [基于chinese-llama-plus北大团队推出法律大模型，数据与模型全部开源，模型合并使用全流程](https://mp.weixin.qq.com/s/WtBwSPZ7jCzJNk3aQVllUQ)
 * [中文 LLaMA & OpenLLaMA & Falcon 大模型](https://github.com/CVI-SZU/Linly)
     * [中文Falcon基础模型：代码实现与增量训练](https://zhuanlan.zhihu.com/p/636994073)
+* [baichuan-7B](https://github.com/baichuan-inc/baichuan-7B)
+* [ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)
 * 大模型参数高效微调
     *  [大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)  
     *  [大模型参数高效微调技术原理综述（二）-BitFit、Prefix Tuning、Prompt Tuning](https://mp.weixin.qq.com/s/fUAUr9X3XLndfjga2QIHbA)
