@@ -12,6 +12,12 @@ sort: 5
 
 ![脑图](https://note.youdao.com/yws/api/personal/file/WEB3af5a35b6c428fec507aa7451df36edb?method=download&shareKey=0b33dec4c5a1643a63e8f519baf729eb)
 
+![数据预处理流程](https://note.youdao.com/yws/api/personal/file/WEB7f33bf4659b4edb0c738dc7a94e16007?method=download&shareKey=125e8321029f77c7645cffdacf29f45e)
+
+![现有大预言模型的详细优化设置](https://note.youdao.com/yws/api/personal/file/WEB36f94cb314023ea64d5d72d893c0f82e?method=download&shareKey=fd3569d1ae77d3705d8a90edf68a6991)
+
+
+
 ## 引言
 
 * 语言建模旨在对词序列的生成概率进行建模,以预测未来(或缺失)单词的概率
