@@ -18,6 +18,33 @@ sort: 5
 
 
 
+
+## 资源汇总
+
+
+* [Lawyer LLaMA](https://github.com/AndrewZhe/lawyer-llama)
+    * [基于chinese-llama-plus北大团队推出法律大模型，数据与模型全部开源，模型合并使用全流程](https://mp.weixin.qq.com/s/WtBwSPZ7jCzJNk3aQVllUQ)
+* [中文 LLaMA & OpenLLaMA & Falcon 大模型](https://github.com/CVI-SZU/Linly)
+    * [中文Falcon基础模型：代码实现与增量训练](https://zhuanlan.zhihu.com/p/636994073)
+* [baichuan-7B](https://github.com/baichuan-inc/baichuan-7B)
+* [ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)
+* [Firefly](https://github.com/yangjianxin1/Firefly)
+    * [Firefly | QLoRA+百万数据，多卡高效微调bloom-7b1模型](https://mp.weixin.qq.com/s/lA4YUJ9XGpKlUUUjz0Le-g)  
+* 大模型参数高效微调
+    *  [大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)  
+    *  [大模型参数高效微调技术原理综述（二）-BitFit、Prefix Tuning、Prompt Tuning](https://mp.weixin.qq.com/s/fUAUr9X3XLndfjga2QIHbA)
+    *  [大模型参数高效微调技术原理综述（三）-P-Tuning、P-Tuning v2](https://mp.weixin.qq.com/s/f4l04f78F507JRrCawnV8w)
+    *  [大模型参数高效微调技术原理综述（四）-Adapter Tuning及其变体](https://mp.weixin.qq.com/s/nUAcCz6mcgGuUeuTfgqmOQ)
+    *  [大模型参数高效微调技术原理综述（五）-LoRA、AdaLoRA、QLoRA](https://mp.weixin.qq.com/s/N_N6RqKB9pjZ1tozfM5f5A)
+    *  [大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT](https://mp.weixin.qq.com/s/M2nds_FJBXooi08qDU-4yA)
+    *  [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)
+    *  [LLaMA, ChatGLM, BLOOM的参数高效微调实践](https://zhuanlan.zhihu.com/p/635710004)
+
+
+
+
+
+
 ## 引言
 
 * 语言建模旨在对词序列的生成概率进行建模,以预测未来(或缺失)单词的概率
@@ -163,24 +190,6 @@ sort: 5
     * 在大语言模型的预训练过程中，常常会遇到训练不稳定的问题，这可能会导致模型崩溃。为了解决这个问题， 通常会广泛使用权重衰减和梯度裁剪，其中现有的研究通常将梯度裁剪的阈值设置为 1.0，将权重衰 减率设置为0.1。然而，随着大语言模型的扩展，训练损失的峰值也更容易发生，导致训练不稳定。为了缓解这个问题，PaLM和OPT使用了一种简单的策略，即从峰值之前的一个检查点重新开始训练过程，并跳过可能导致问题的数据。此外，GLM发现嵌入层的异常梯度通常会导致峰值，因此提出缩小嵌入层梯度以缓解这个问题。 
 
 
-## 资源汇总
-
-
-* [Lawyer LLaMA](https://github.com/AndrewZhe/lawyer-llama)
-    * [基于chinese-llama-plus北大团队推出法律大模型，数据与模型全部开源，模型合并使用全流程](https://mp.weixin.qq.com/s/WtBwSPZ7jCzJNk3aQVllUQ)
-* [中文 LLaMA & OpenLLaMA & Falcon 大模型](https://github.com/CVI-SZU/Linly)
-    * [中文Falcon基础模型：代码实现与增量训练](https://zhuanlan.zhihu.com/p/636994073)
-* [baichuan-7B](https://github.com/baichuan-inc/baichuan-7B)
-* [ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)
-* 大模型参数高效微调
-    *  [大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)  
-    *  [大模型参数高效微调技术原理综述（二）-BitFit、Prefix Tuning、Prompt Tuning](https://mp.weixin.qq.com/s/fUAUr9X3XLndfjga2QIHbA)
-    *  [大模型参数高效微调技术原理综述（三）-P-Tuning、P-Tuning v2](https://mp.weixin.qq.com/s/f4l04f78F507JRrCawnV8w)
-    *  [大模型参数高效微调技术原理综述（四）-Adapter Tuning及其变体](https://mp.weixin.qq.com/s/nUAcCz6mcgGuUeuTfgqmOQ)
-    *  [大模型参数高效微调技术原理综述（五）-LoRA、AdaLoRA、QLoRA](https://mp.weixin.qq.com/s/N_N6RqKB9pjZ1tozfM5f5A)
-    *  [大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT](https://mp.weixin.qq.com/s/M2nds_FJBXooi08qDU-4yA)
-    *  [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)
-    *  [LLaMA, ChatGLM, BLOOM的参数高效微调实践](https://zhuanlan.zhihu.com/p/635710004)
 
 
 ## 参考 
