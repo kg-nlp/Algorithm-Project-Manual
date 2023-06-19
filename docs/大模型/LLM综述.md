@@ -29,7 +29,7 @@ sort: 5
 * [baichuan-7B](https://github.com/baichuan-inc/baichuan-7B)
 * [ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)
 * [Firefly](https://github.com/yangjianxin1/Firefly)
-    * [Firefly | QLoRA+百万数据，多卡高效微调bloom-7b1模型](https://mp.weixin.qq.com/s/lA4YUJ9XGpKlUUUjz0Le-g)  
+    * [Firefly QLoRA+百万数据，多卡高效微调bloom-7b1模型](https://mp.weixin.qq.com/s/lA4YUJ9XGpKlUUUjz0Le-g)  
 * 大模型参数高效微调
     *  [大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)  
     *  [大模型参数高效微调技术原理综述（二）-BitFit、Prefix Tuning、Prompt Tuning](https://mp.weixin.qq.com/s/fUAUr9X3XLndfjga2QIHbA)
