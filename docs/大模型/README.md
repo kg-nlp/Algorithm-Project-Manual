@@ -13,3 +13,4 @@ sort: 1
 * [LLM综述](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/LLM综述.html) 
 * [MedicalGPT源码阅读](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/MedicalGPT源码阅读.html) 
 * [ChatGLM工程分析](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/ChatGLM工程分析.html) 
+* [baichuan工程分析](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/baichuan工程分析.html)
