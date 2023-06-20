@@ -39,7 +39,7 @@ sort: 5
     *  [大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT](https://mp.weixin.qq.com/s/M2nds_FJBXooi08qDU-4yA)
     *  [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)
     *  [LLaMA, ChatGLM, BLOOM的参数高效微调实践](https://zhuanlan.zhihu.com/p/635710004)
-
+    * [650亿参数，8块GPU就能全参数微调：邱锡鹏团队把大模型门槛打下来了](https://mp.weixin.qq.com/s/339iXf2bimusfq6zQmFpWw)
 
 
 
