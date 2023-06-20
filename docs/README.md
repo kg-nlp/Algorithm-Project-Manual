@@ -11,6 +11,7 @@
 * [建筑领域](https://kg-nlp.github.io/Algorithm-Project-Manual/建筑领域/)
 * [数据分析](https://kg-nlp.github.io/Algorithm-Project-Manual/数据分析/)
 * [可解释性](https://kg-nlp.github.io/Algorithm-Project-Manual/可解释性/)
+* [文档解析](https://kg-nlp.github.io/Algorithm-Project-Manual/文档解析/)
 
 ## 等待迁移
 
