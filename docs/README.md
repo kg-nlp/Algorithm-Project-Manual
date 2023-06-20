@@ -8,14 +8,14 @@
 ## 正在更新
 
 * [大模型](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/)
-* [可解释性](https://kg-nlp.github.io/Algorithm-Project-Manual/可解释性/)
 * [建筑领域](https://kg-nlp.github.io/Algorithm-Project-Manual/建筑领域/)
-   
+* [数据分析](https://kg-nlp.github.io/Algorithm-Project-Manual/数据分析/)
+* [可解释性](https://kg-nlp.github.io/Algorithm-Project-Manual/可解释性/)
+
 ## 等待迁移
 
 * [多模态](https://kg-nlp.github.io/Algorithm-Project-Manual/多模态/)
 * [信息抽取](https://kg-nlp.github.io/Algorithm-Project-Manual/信息抽取/)
-* [数据分析](https://kg-nlp.github.io/Algorithm-Project-Manual/数据分析/)
 * [机器学习](https://kg-nlp.github.io/Algorithm-Project-Manual/机器学习/)
 * [数据结构](https://kg-nlp.github.io/Algorithm-Project-Manual/数据结构/)
 * [算法框架](https://kg-nlp.github.io/Algorithm-Project-Manual/算法框架/)
