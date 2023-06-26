@@ -4,7 +4,7 @@ sort: 5
 
 # LLM综述
 
-[算法开发手册](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/LLM综述.html)
+[最新算法开发手册](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/LLM综述.html)
 [有道云脑图](https://note.youdao.com/s/A5txdQdE)
 
 > 关于综述论文,看了多遍,摘抄了大部分内容放到这里;每次实践其中一个小点后再回过头来看,才更加理解了作者的观点。
@@ -15,33 +15,6 @@ sort: 5
 ![数据预处理流程](https://note.youdao.com/yws/api/personal/file/WEB7f33bf4659b4edb0c738dc7a94e16007?method=download&shareKey=125e8321029f77c7645cffdacf29f45e)
 
 ![现有大预言模型的详细优化设置](https://note.youdao.com/yws/api/personal/file/WEB36f94cb314023ea64d5d72d893c0f82e?method=download&shareKey=fd3569d1ae77d3705d8a90edf68a6991)
-
-
-
-
-## 资源汇总
-
-
-* [Lawyer LLaMA](https://github.com/AndrewZhe/lawyer-llama)
-    * [基于chinese-llama-plus北大团队推出法律大模型，数据与模型全部开源，模型合并使用全流程](https://mp.weixin.qq.com/s/WtBwSPZ7jCzJNk3aQVllUQ)
-* [中文 LLaMA & OpenLLaMA & Falcon 大模型](https://github.com/CVI-SZU/Linly)
-    * [中文Falcon基础模型：代码实现与增量训练](https://zhuanlan.zhihu.com/p/636994073)
-* [baichuan-7B](https://github.com/baichuan-inc/baichuan-7B)
-* [ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)
-* [Firefly](https://github.com/yangjianxin1/Firefly)
-    * [Firefly QLoRA+百万数据，多卡高效微调bloom-7b1模型](https://mp.weixin.qq.com/s/lA4YUJ9XGpKlUUUjz0Le-g)  
-* 大模型参数高效微调
-    *  [大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)  
-    *  [大模型参数高效微调技术原理综述（二）-BitFit、Prefix Tuning、Prompt Tuning](https://mp.weixin.qq.com/s/fUAUr9X3XLndfjga2QIHbA)
-    *  [大模型参数高效微调技术原理综述（三）-P-Tuning、P-Tuning v2](https://mp.weixin.qq.com/s/f4l04f78F507JRrCawnV8w)
-    *  [大模型参数高效微调技术原理综述（四）-Adapter Tuning及其变体](https://mp.weixin.qq.com/s/nUAcCz6mcgGuUeuTfgqmOQ)
-    *  [大模型参数高效微调技术原理综述（五）-LoRA、AdaLoRA、QLoRA](https://mp.weixin.qq.com/s/N_N6RqKB9pjZ1tozfM5f5A)
-    *  [大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT](https://mp.weixin.qq.com/s/M2nds_FJBXooi08qDU-4yA)
-    *  [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)
-    *  [LLaMA, ChatGLM, BLOOM的参数高效微调实践](https://zhuanlan.zhihu.com/p/635710004)
-    * [650亿参数，8块GPU就能全参数微调：邱锡鹏团队把大模型门槛打下来了](https://mp.weixin.qq.com/s/339iXf2bimusfq6zQmFpWw)
-
-
 
 
 
@@ -195,3 +168,38 @@ sort: 5
 ## 参考 
 [1] [A Survey of Large Language Models](https://arxiv.org/abs/2303.18223)  
 [2] [A Survey of Large Language Modelsgithub](https://github.com/RUCAIBox/LLMSurvey/tree/main)
+
+
+
+## 资源汇总
+
+
+* [Lawyer LLaMA](https://github.com/AndrewZhe/lawyer-llama)
+    * [基于chinese-llama-plus北大团队推出法律大模型，数据与模型全部开源，模型合并使用全流程](https://mp.weixin.qq.com/s/WtBwSPZ7jCzJNk3aQVllUQ)
+* [中文 LLaMA & OpenLLaMA & Falcon 大模型](https://github.com/CVI-SZU/Linly)
+    * [中文Falcon基础模型：代码实现与增量训练](https://zhuanlan.zhihu.com/p/636994073)
+* [baichuan-7B](https://github.com/baichuan-inc/baichuan-7B)
+* [ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)
+* [Firefly](https://github.com/yangjianxin1/Firefly)
+    * [Firefly QLoRA+百万数据，多卡高效微调bloom-7b1模型](https://mp.weixin.qq.com/s/lA4YUJ9XGpKlUUUjz0Le-g)  
+* 大模型参数高效微调
+    *  [大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)  
+    *  [大模型参数高效微调技术原理综述（二）-BitFit、Prefix Tuning、Prompt Tuning](https://mp.weixin.qq.com/s/fUAUr9X3XLndfjga2QIHbA)
+    *  [大模型参数高效微调技术原理综述（三）-P-Tuning、P-Tuning v2](https://mp.weixin.qq.com/s/f4l04f78F507JRrCawnV8w)
+    *  [大模型参数高效微调技术原理综述（四）-Adapter Tuning及其变体](https://mp.weixin.qq.com/s/nUAcCz6mcgGuUeuTfgqmOQ)
+    *  [大模型参数高效微调技术原理综述（五）-LoRA、AdaLoRA、QLoRA](https://mp.weixin.qq.com/s/N_N6RqKB9pjZ1tozfM5f5A)
+    *  [大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT](https://mp.weixin.qq.com/s/M2nds_FJBXooi08qDU-4yA)
+    *  [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)
+    *  [LLaMA, ChatGLM, BLOOM的参数高效微调实践](https://zhuanlan.zhihu.com/p/635710004)
+    * [650亿参数，8块GPU就能全参数微调：邱锡鹏团队把大模型门槛打下来了](https://mp.weixin.qq.com/s/339iXf2bimusfq6zQmFpWw)
+    * [ChatGLM2-6B 发布：性能大幅提升，8-32k上下文，推理提速42%](https://mp.weixin.qq.com/s/zDf9YbOEc681Otcjh0FJxw)
+       
+## 大模型进展
+
+
+
+* ChatGLM2-6B 发布：性能大幅提升，8-32k上下文，推理提速42%
+    *  ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本
+    *  更强大的性能：基于 ChatGLM 初代模型的开发经验，我们全面升级了 ChatGLM2-6B 的基座模型。ChatGLM2-6B 使用了 GLM 的混合目标函数，经过了 1.4T 中英标识符的预训练与人类偏好对齐训练，评测结果显示，相比于初代模型，ChatGLM2-6B 在 MMLU（+23%）、CEval（+33%）、GSM8K（+571%） 、BBH（+60%）等数据集上的性能取得了大幅度的提升，在同尺寸开源模型中具有较强的竞争力。
+    *  更长的上下文：基于 FlashAttention 技术，我们将基座模型的上下文长度（Context Length）由 ChatGLM-6B 的 2K 扩展到了 32K，并在对话阶段使用 8K 的上下文长度训练，允许更多轮次的对话。但当前版本的 ChatGLM2-6B 对单轮超长文档的理解能力有限，我们会在后续迭代升级中着重进行优化。
+    *  更高效的推理：基于 Multi-Query Attention 技术，ChatGLM2-6B 有更高效的推理速度和更低的显存占用：在官方的模型实现下，推理速度相比初代提升了 42%，INT4 量化下，6G 显存支持的对话长度由 1K 提升到了 8K。
