@@ -10,8 +10,8 @@
 * [大模型](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/)
 * [建筑领域](https://kg-nlp.github.io/Algorithm-Project-Manual/建筑领域/)
 * [数据分析](https://kg-nlp.github.io/Algorithm-Project-Manual/数据分析/)
-* [可解释性](https://kg-nlp.github.io/Algorithm-Project-Manual/可解释性/)
 * [文档解析](https://kg-nlp.github.io/Algorithm-Project-Manual/文档解析/)
+* [工程内容](https://kg-nlp.github.io/Algorithm-Project-Manual/工程内容/)
 
 ## 等待迁移
 
@@ -30,3 +30,4 @@
 * [推荐系统](https://kg-nlp.github.io/Algorithm-Project-Manual/推荐系统/)
 * [知识图谱](https://kg-nlp.github.io/Algorithm-Project-Manual/知识图谱/)   
 * [机构学](https://kg-nlp.github.io/Algorithm-Project-Manual/机构学/)
+* [可解释性](https://kg-nlp.github.io/Algorithm-Project-Manual/可解释性/)
