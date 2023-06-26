@@ -174,6 +174,7 @@ sort: 5
 ## 资源汇总
 
 
+### 模型
 * [Lawyer LLaMA](https://github.com/AndrewZhe/lawyer-llama)
     * [基于chinese-llama-plus北大团队推出法律大模型，数据与模型全部开源，模型合并使用全流程](https://mp.weixin.qq.com/s/WtBwSPZ7jCzJNk3aQVllUQ)
 * [中文 LLaMA & OpenLLaMA & Falcon 大模型](https://github.com/CVI-SZU/Linly)
@@ -184,19 +185,24 @@ sort: 5
     * [Firefly QLoRA+百万数据，多卡高效微调bloom-7b1模型](https://mp.weixin.qq.com/s/lA4YUJ9XGpKlUUUjz0Le-g)  
 * [ChatGLM2-6B 发布：性能大幅提升，8-32k上下文，推理提速42%](https://mp.weixin.qq.com/s/zDf9YbOEc681Otcjh0FJxw)
 
-* 大模型参数高效微调
-    *  [大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)  
-    *  [大模型参数高效微调技术原理综述（二）-BitFit、Prefix Tuning、Prompt Tuning](https://mp.weixin.qq.com/s/fUAUr9X3XLndfjga2QIHbA)
-    *  [大模型参数高效微调技术原理综述（三）-P-Tuning、P-Tuning v2](https://mp.weixin.qq.com/s/f4l04f78F507JRrCawnV8w)
-    *  [大模型参数高效微调技术原理综述（四）-Adapter Tuning及其变体](https://mp.weixin.qq.com/s/nUAcCz6mcgGuUeuTfgqmOQ)
-    *  [大模型参数高效微调技术原理综述（五）-LoRA、AdaLoRA、QLoRA](https://mp.weixin.qq.com/s/N_N6RqKB9pjZ1tozfM5f5A)
-    *  [大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT](https://mp.weixin.qq.com/s/M2nds_FJBXooi08qDU-4yA)
-    *  [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)
-    *  [LLaMA, ChatGLM, BLOOM的参数高效微调实践](https://zhuanlan.zhihu.com/p/635710004)
-    * [650亿参数，8块GPU就能全参数微调：邱锡鹏团队把大模型门槛打下来了](https://mp.weixin.qq.com/s/339iXf2bimusfq6zQmFpWw)
+### 微调
+
+*  [大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)  
+*  [大模型参数高效微调技术原理综述（二）-BitFit、Prefix Tuning、Prompt Tuning](https://mp.weixin.qq.com/s/fUAUr9X3XLndfjga2QIHbA)
+*  [大模型参数高效微调技术原理综述（三）-P-Tuning、P-Tuning v2](https://mp.weixin.qq.com/s/f4l04f78F507JRrCawnV8w)
+*  [大模型参数高效微调技术原理综述（四）-Adapter Tuning及其变体](https://mp.weixin.qq.com/s/nUAcCz6mcgGuUeuTfgqmOQ)
+*  [大模型参数高效微调技术原理综述（五）-LoRA、AdaLoRA、QLoRA](https://mp.weixin.qq.com/s/N_N6RqKB9pjZ1tozfM5f5A)
+*  [大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT](https://mp.weixin.qq.com/s/M2nds_FJBXooi08qDU-4yA)
+*  [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)
+*  [LLaMA, ChatGLM, BLOOM的参数高效微调实践](https://zhuanlan.zhihu.com/p/635710004)
+* [650亿参数，8块GPU就能全参数微调：邱锡鹏团队把大模型门槛打下来了](https://mp.weixin.qq.com/s/339iXf2bimusfq6zQmFpWw)
+
+### 其他
+
+* [大模型微调究竟需要多少数据？](https://mp.weixin.qq.com/s/DVH-vlOpGik8iwW4KnPlkw)
 
        
-## 大模型进展
+## 链接内容
 
 * ChatGLM2-6B 发布：性能大幅提升，8-32k上下文，推理提速42%
     *  ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本
