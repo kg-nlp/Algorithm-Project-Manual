@@ -182,6 +182,8 @@ sort: 5
 * [ChatGLM-6B](https://github.com/THUDM/ChatGLM-6B)
 * [Firefly](https://github.com/yangjianxin1/Firefly)
     * [Firefly QLoRA+百万数据，多卡高效微调bloom-7b1模型](https://mp.weixin.qq.com/s/lA4YUJ9XGpKlUUUjz0Le-g)  
+* [ChatGLM2-6B 发布：性能大幅提升，8-32k上下文，推理提速42%](https://mp.weixin.qq.com/s/zDf9YbOEc681Otcjh0FJxw)
+
 * 大模型参数高效微调
     *  [大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)  
     *  [大模型参数高效微调技术原理综述（二）-BitFit、Prefix Tuning、Prompt Tuning](https://mp.weixin.qq.com/s/fUAUr9X3XLndfjga2QIHbA)
@@ -192,11 +194,9 @@ sort: 5
     *  [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)
     *  [LLaMA, ChatGLM, BLOOM的参数高效微调实践](https://zhuanlan.zhihu.com/p/635710004)
     * [650亿参数，8块GPU就能全参数微调：邱锡鹏团队把大模型门槛打下来了](https://mp.weixin.qq.com/s/339iXf2bimusfq6zQmFpWw)
-    * [ChatGLM2-6B 发布：性能大幅提升，8-32k上下文，推理提速42%](https://mp.weixin.qq.com/s/zDf9YbOEc681Otcjh0FJxw)
+
        
 ## 大模型进展
-
-
 
 * ChatGLM2-6B 发布：性能大幅提升，8-32k上下文，推理提速42%
     *  ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本
