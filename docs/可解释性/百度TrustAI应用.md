@@ -10,6 +10,6 @@ sort: 2
 * [🔨个人知乎](https://www.zhihu.com/people/zhangyj-n)
 
 
-## 指南介绍 
+## 应用介绍 
 
-[算法框架-模型可解释性-百度TrustAI应用(二)](https://zhuanlan.zhihu.com/p/636063567)
+* [算法框架-模型可解释性-百度TrustAI应用(二)](https://zhuanlan.zhihu.com/p/636063567)
