@@ -1,5 +1,7 @@
 # 算法开发手册
 
+📢 **不积跬步，无以至千里；不积小流，无以成江海**
+
 
 本开发文档由以下几部分组成-不定期更新内容
 
@@ -31,3 +33,9 @@
 * [推荐系统](https://kg-nlp.github.io/Algorithm-Project-Manual/推荐系统/)
 * [知识图谱](https://kg-nlp.github.io/Algorithm-Project-Manual/知识图谱/)   
 * [机构学](https://kg-nlp.github.io/Algorithm-Project-Manual/机构学/)
+
+
+
+
+
+
