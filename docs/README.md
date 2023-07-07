@@ -16,11 +16,11 @@
 * [工程内容](https://kg-nlp.github.io/Algorithm-Project-Manual/工程内容/)
 * [可解释性](https://kg-nlp.github.io/Algorithm-Project-Manual/可解释性/)
 * [信息抽取](https://kg-nlp.github.io/Algorithm-Project-Manual/信息抽取/)
+* [机器学习](https://kg-nlp.github.io/Algorithm-Project-Manual/机器学习/)
 
 ## 等待迁移
 
 * [多模态](https://kg-nlp.github.io/Algorithm-Project-Manual/多模态/)
-* [机器学习](https://kg-nlp.github.io/Algorithm-Project-Manual/机器学习/)
 * [数据结构](https://kg-nlp.github.io/Algorithm-Project-Manual/数据结构/)
 * [算法框架](https://kg-nlp.github.io/Algorithm-Project-Manual/算法框架/)
 * [算法语料](https://kg-nlp.github.io/Algorithm-Project-Manual/算法语料/)
