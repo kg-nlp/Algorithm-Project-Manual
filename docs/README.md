@@ -17,6 +17,7 @@
 * [可解释性](https://kg-nlp.github.io/Algorithm-Project-Manual/可解释性/)
 * [信息抽取](https://kg-nlp.github.io/Algorithm-Project-Manual/信息抽取/)
 * [机器学习](https://kg-nlp.github.io/Algorithm-Project-Manual/机器学习/)
+* [文本分类](https://kg-nlp.github.io/Algorithm-Project-Manual/文本分类/)
 
 ## 等待迁移
 
@@ -26,7 +27,6 @@
 * [算法语料](https://kg-nlp.github.io/Algorithm-Project-Manual/算法语料/)
 * [图神经](https://kg-nlp.github.io/Algorithm-Project-Manual/图神经/)
 * [模型压缩](https://kg-nlp.github.io/Algorithm-Project-Manual/模型压缩/)
-* [文本分类](https://kg-nlp.github.io/Algorithm-Project-Manual/文本分类/)
 * [文本生成](https://kg-nlp.github.io/Algorithm-Project-Manual/文本生成/)
 * [文本匹配](https://kg-nlp.github.io/Algorithm-Project-Manual/文本匹配/)
 * [检索系统](https://kg-nlp.github.io/Algorithm-Project-Manual/检索系统/)
