@@ -201,6 +201,8 @@ sort: 5
 * [ACL2023大模型如何快速构建指令遵循数据集？Self-Instruct：只需175条种子数据追上InstructGPT](https://mp.weixin.qq.com/s/ehEM04xmeJyqB4z7rmLKBQ)
 * [从 FlashAttention 到 PagedAttention, 如何进一步优化 Attention 性能](https://zhuanlan.zhihu.com/p/638468472)
 * [LLM从零开始训练大模型](https://zhuanlan.zhihu.com/p/636270877)
+* [大模型LLM知识整理](https://zhuanlan.zhihu.com/p/641109766)
+
 
 ## 链接内容
 
