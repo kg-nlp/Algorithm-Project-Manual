@@ -164,9 +164,9 @@ sort: 5
 
 
 ## 参考 
-[1] [A Survey of Large Language Models](https://arxiv.org/abs/2303.18223)  
-[2] [A Survey of Large Language Modelsgithub](https://github.com/RUCAIBox/LLMSurvey/tree/main)
-[3] [人大发表迄今为止最大最全的大模型综述](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247521215&idx=1&sn=bd4ac9718edd2e67e27a124441c94cc8&chksm=eb53872cdc240e3a6946073ccfdcbf2d4563d39d0fd42884e33b387c67ee6c2070fea2494965&mpshare=1&scene=2&srcid=0707gJFH8AWsFrWym2TJwqto&sharer_sharetime=1688710023091&sharer_shareid=225eb5292c43eed8f6e53f73d8e5205d#rd)
+* [1] [A Survey of Large Language Models](https://arxiv.org/abs/2303.18223)  
+* [2] [A Survey of Large Language Modelsgithub](https://github.com/RUCAIBox/LLMSurvey/tree/main)  
+* [3] [人大发表迄今为止最大最全的大模型综述](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247521215&idx=1&sn=bd4ac9718edd2e67e27a124441c94cc8&chksm=eb53872cdc240e3a6946073ccfdcbf2d4563d39d0fd42884e33b387c67ee6c2070fea2494965&mpshare=1&scene=2&srcid=0707gJFH8AWsFrWym2TJwqto&sharer_sharetime=1688710023091&sharer_shareid=225eb5292c43eed8f6e53f73d8e5205d#rd)
 
 
 ## 资源汇总
