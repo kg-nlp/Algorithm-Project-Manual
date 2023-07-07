@@ -163,12 +163,10 @@ sort: 5
     * 在大语言模型的预训练过程中，常常会遇到训练不稳定的问题，这可能会导致模型崩溃。为了解决这个问题， 通常会广泛使用权重衰减和梯度裁剪，其中现有的研究通常将梯度裁剪的阈值设置为 1.0，将权重衰 减率设置为0.1。然而，随着大语言模型的扩展，训练损失的峰值也更容易发生，导致训练不稳定。为了缓解这个问题，PaLM和OPT使用了一种简单的策略，即从峰值之前的一个检查点重新开始训练过程，并跳过可能导致问题的数据。此外，GLM发现嵌入层的异常梯度通常会导致峰值，因此提出缩小嵌入层梯度以缓解这个问题。 
 
 
-
-
 ## 参考 
 [1] [A Survey of Large Language Models](https://arxiv.org/abs/2303.18223)  
 [2] [A Survey of Large Language Modelsgithub](https://github.com/RUCAIBox/LLMSurvey/tree/main)
-
+[3] [人大发表迄今为止最大最全的大模型综述](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247521215&idx=1&sn=bd4ac9718edd2e67e27a124441c94cc8&chksm=eb53872cdc240e3a6946073ccfdcbf2d4563d39d0fd42884e33b387c67ee6c2070fea2494965&mpshare=1&scene=2&srcid=0707gJFH8AWsFrWym2TJwqto&sharer_sharetime=1688710023091&sharer_shareid=225eb5292c43eed8f6e53f73d8e5205d#rd)
 
 
 ## 资源汇总
