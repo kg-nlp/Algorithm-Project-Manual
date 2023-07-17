@@ -194,6 +194,7 @@ sort: 5
 *  [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)
 *  [LLaMA, ChatGLM, BLOOM的参数高效微调实践](https://zhuanlan.zhihu.com/p/635710004)
 * [650亿参数，8块GPU就能全参数微调：邱锡鹏团队把大模型门槛打下来了](https://mp.weixin.qq.com/s/339iXf2bimusfq6zQmFpWw)
+* [微调百川Baichuan-13B保姆式教程，手把手教你训练百亿大模型](https://mp.weixin.qq.com/s/ZBY6kbogHjbCQvZBzNEqag)
 
 ### 其他
 
@@ -202,12 +203,26 @@ sort: 5
 * [从 FlashAttention 到 PagedAttention, 如何进一步优化 Attention 性能](https://zhuanlan.zhihu.com/p/638468472)
 * [LLM从零开始训练大模型](https://zhuanlan.zhihu.com/p/636270877)
 * [大模型LLM知识整理](https://zhuanlan.zhihu.com/p/641109766)
+* [预训练模型微调的原理](https://zhuanlan.zhihu.com/p/35890660)
 
 
-## 链接内容
+## 数据处理+模型训练
 
-* ChatGLM2-6B 发布：性能大幅提升，8-32k上下文，推理提速42%
-    *  ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本
-    *  更强大的性能：基于 ChatGLM 初代模型的开发经验，我们全面升级了 ChatGLM2-6B 的基座模型。ChatGLM2-6B 使用了 GLM 的混合目标函数，经过了 1.4T 中英标识符的预训练与人类偏好对齐训练，评测结果显示，相比于初代模型，ChatGLM2-6B 在 MMLU（+23%）、CEval（+33%）、GSM8K（+571%） 、BBH（+60%）等数据集上的性能取得了大幅度的提升，在同尺寸开源模型中具有较强的竞争力。
-    *  更长的上下文：基于 FlashAttention 技术，我们将基座模型的上下文长度（Context Length）由 ChatGLM-6B 的 2K 扩展到了 32K，并在对话阶段使用 8K 的上下文长度训练，允许更多轮次的对话。但当前版本的 ChatGLM2-6B 对单轮超长文档的理解能力有限，我们会在后续迭代升级中着重进行优化。
-    *  更高效的推理：基于 Multi-Query Attention 技术，ChatGLM2-6B 有更高效的推理速度和更低的显存占用：在官方的模型实现下，推理速度相比初代提升了 42%，INT4 量化下，6G 显存支持的对话长度由 1K 提升到了 8K。
+### 数据处理
+
+参考 [LLM数据处理](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/LLM数据处理.html)
+
+* 将所有数据转为excel或txt格式
+* 总结数据问题,提炼规则
+* 开始提取数据(PT),常规预训练模型需要的数据,编写相应规则
+    * 去重算法准备
+    * 分类算法准备(需要准备数据集)保证精确率
+    * 流畅度模型准备
+* 开始提取提示数据(SFT),需要格式清洗的文档构建,减少规则编写
+
+
+
+
+
+
+
