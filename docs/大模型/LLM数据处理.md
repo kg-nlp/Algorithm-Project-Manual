@@ -144,13 +144,13 @@ sort: 11
 
 * 模型数据格式处理
     * all_doc_ids [ 1390 41644 40183 ...    42  4315 12043] (4197617,)
-    lens [47 73 84 ... 47 56 39] (82609,)
-    docs [    0    42    79 ... 82517 82550 82609] (2218,)
-    Total sentences num: 82609   # 按照换行,句号,问号,叹号
-    Total documents num: 2217
-    Total tokens num: 4197617
-    Average tokens per sentence: 50.81
-    Average tokens per document: 1893.38
+    * lens [47 73 84 ... 47 56 39] (82609,)
+    * docs [    0    42    79 ... 82517 82550 82609] (2218,)
+    * Total sentences num: 82609   # 按照换行,句号,问号,叹号
+    * Total documents num: 2217
+    * Total tokens num: 4197617
+    * Average tokens per sentence: 50.81
+    * Average tokens per document: 1893.38
 
 * 结果
 [垂直领域小模型快速训练（一）](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/垂直领域小模型快速训练（一）.html)
