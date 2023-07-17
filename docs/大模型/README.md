@@ -17,3 +17,4 @@ sort: 1
 * [垂直领域小模型快速训练](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/垂直领域小模型快速训练.html)
 * [预训练模型整理](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/预训练模型整理.html)
 * [LLM数据处理](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/LLM数据处理.html)
+* [垂直领域小模型快速训练（一）](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/垂直领域小模型快速训练（一）.html)
