@@ -182,6 +182,7 @@ sort: 5
 * [Firefly](https://github.com/yangjianxin1/Firefly)
     * [Firefly QLoRA+百万数据，多卡高效微调bloom-7b1模型](https://mp.weixin.qq.com/s/lA4YUJ9XGpKlUUUjz0Le-g)  
 * [ChatGLM2-6B 发布：性能大幅提升，8-32k上下文，推理提速42%](https://mp.weixin.qq.com/s/zDf9YbOEc681Otcjh0FJxw)
+* [GLM-130B：开放的中英双语预训练模型](https://github.com/THUDM/GLM-130B/blob/main/README_zh.md)
 
 ### 微调
 
@@ -204,7 +205,9 @@ sort: 5
 * [LLM从零开始训练大模型](https://zhuanlan.zhihu.com/p/636270877)
 * [大模型LLM知识整理](https://zhuanlan.zhihu.com/p/641109766)
 * [预训练模型微调的原理](https://zhuanlan.zhihu.com/p/35890660)
-
+* [大模型时代-行业落地的再思考](https://mp.weixin.qq.com/s/ewI4FKX_R30E5fF6p2GYUQ)
+* [灾难性遗忘](https://www.zhihu.com/question/265056068)
+* [腾讯预训练模型框架](https://github.com/Tencent/TencentPretrain/blob/main/README_ZH.md)
 
 ## 数据处理+模型训练
 
