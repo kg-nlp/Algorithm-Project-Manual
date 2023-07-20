@@ -208,7 +208,12 @@ sort: 5
 * [大模型时代-行业落地的再思考](https://mp.weixin.qq.com/s/ewI4FKX_R30E5fF6p2GYUQ)
 * [灾难性遗忘](https://www.zhihu.com/question/265056068)
 * [腾讯预训练模型框架](https://github.com/Tencent/TencentPretrain/blob/main/README_ZH.md)
+    * TencentPretrain 是 UER-py 预训练框架的多模态版本，支持 BERT、GPT、T5、ViT、Dall-E、Speech2Text 等模型，支持文本、图像和语音模态预训练及下游任务。TencentPretrain 基于模块化设计，用户可以通过模块组合的方式构成各种模型，也可以通过复用已有的模块进行少量修改来实现新的模型。 
+* [训练中文LLaMA大规模语言模型](https://zhuanlan.zhihu.com/p/612752963)
+    * 基于 TencentPretrain 预训练框架训练 LLaMA 模型。 
 * [LLaMA 2技术细节详细介绍！](https://mp.weixin.qq.com/s/zGQpxp865xuOIKD6e6dBVQ)
+    *  Llama 2 模型接受了 2 万亿个标记的训练，上下文长度是 Llama 1 的两倍。Llama-2-chat 模型还接受了超过 100 万个新的人类注释的训练。
+    *  Llama2训练语料相比LLaMA多出40%，上下文长度是由之前的2048升级到4096，可以理解和生成更长的文本。
 
 ## 数据处理+模型训练
 
