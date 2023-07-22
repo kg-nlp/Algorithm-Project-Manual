@@ -64,10 +64,10 @@ sort: 11
 | 迁移目录下所有文件| 自定义脚本 | √ | |
 | 文本格式转换| 自定义脚本 | √| |
 | pdf批量转docx| 使用WPS    | √ | |
-| 转换前后文件对比查漏  | 自定义脚本| x| |
-| 过滤：文件名存在副本,文件大小一致判断 | 自定义脚本| x| |
+| 转换前后文件对比查漏  | 自定义脚本| √| |
+| 过滤：文件名存在副本,文件大小一致判断 | 自定义脚本| √| |
 | 压缩包解压 | 手动解压,自定义脚本 | √ | |
-| 文档只保留正文,过滤导航栏文本,标题,脚注,页眉页脚| 自定义脚本| x | |
+| 文档只保留正文,过滤导航栏文本,标题,脚注,页眉页脚| 自定义脚本| √x | |
 | 去除 html 标签、去除异常字符、去除冗余字符、去除 URL、去除 E-mail、去除电话号码，将全角字母数字空格替换为半角 | pip工具+自定义脚本 | √ | |
 | 过滤非中文占比高的句子 |自定义脚本|√| |
 | 整理无效禁用词，标点符号过多的行  | 自定义脚本 |√x| |
@@ -85,6 +85,7 @@ sort: 11
 |只提取中文去重|自定义脚本|√|针对业务数据集中含有规格型号|
 |近似匹配循环去重|自定义脚本|√|相似数据保留最长|
 |公共子串过滤|自定义脚本|√||
+|所有数据长度小于10的过滤掉|自定义脚本|√|
 
 
 
@@ -101,7 +102,7 @@ sort: 11
 | 目录   | 格式           | 目录大小  |
 | ---- | ------------ | ----- |
 | 工艺手册 | 多为pdf和doc    | 225M  |
-| 施工方案 | txt          | 472M  |
+| 施工方案 | doc,txt          | 472M  |
 | 规范搜索 | txt,doc,pdf,docx  | 9.41G  |
 | 论文数据 | pdf          | 351M  |
 | 合同数据 | pdf,doc,xls等 | 9.44G |
@@ -114,8 +115,6 @@ sort: 11
 ### 格式
 
 *   每篇token数/每篇样本数
-
-
 
 ```
 {   
@@ -143,7 +142,7 @@ sort: 11
 | --- | --- | --- | --- |
 | 原数据 | 206396 | 8201759 | 转成excel格式 docx2excel |
 | filter | 135139 | 4768389 | 应用过滤规则 get_filter | 
-| mid    | 120919 | 4286773 | 分组去重操作 get_mid|
+| mid    | 120919 | 4286773 | 合并去重分组操作 get_mid|
 | final  | 57708| 4282668 | 文本拼接 get_final |
 
 
@@ -176,18 +175,72 @@ final 是根据(末尾特定符号) 判断是否添加换行符,是否合并
  
 > 脚本位置:  /home/Algorithm_Frame/LLM/process/core/CDE业务数据处理.py
 
-* 成本数据
+* 成本数据(数字,字母等符号很多)
 
 | 数据 | 句子数量 | tokens数 | 备注 |
 | --- | --- | --- | --- |
-| 原数据| 189248 |  |  |
-| filter |  |  | 完全匹配近似匹配去重 get_filter | 
-| final |  |  | 过滤 get_final | 
+|原数据| 189248|11580038| 拉取数据|
+|filter| 20072|1518167|完全匹配近似匹配去重 get_filter |
+|final | 17428|1453167|公共子串过滤 get_final |
+|jsonl | 17428|1453167|格式转换 get_jsonl |
+ 
 
-| jsonl | |  | 文本过滤 get_jsonl | 
- 
- 
- 
+* 成本+工艺手册
+    * all_doc_ids [ 2659 40894  1320 ...    30  2817  9517] (5549871,)
+    * lens [ 35  66  73 ... 122  25  32] (101057,)
+    * docs [     0      1      2 ... 101055 101056 101057] (19646,)
+    * Total sentences num: 101057
+    * Total documents num: 19645
+    * Total tokens num: 5549871
+    * Average tokens per sentence: 54.92
+    * Average tokens per document: 282.51 
+
+* 结果
+[垂直领域小模型快速训练（二）](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/垂直领域小模型快速训练（二）.html)
+
+```bash
+python -u -m paddle.distributed.launch \
+    --gpus "0,1,2,3" \
+    --log_dir "output/${MODEL_NAME}/logs" \
+    run_pretrain.py \
+    --model_name_or_path ${MODEL_NAME} \
+    --tokenizer_name_or_path ${MODEL_NAME} \
+    --input_dir  /home/Algorithm_Frame/LLM/ernie-1.0/data_file/output_data \
+    --output_dir output/${MODEL_NAME} \
+    --split 198,1,1 \
+    --binary_head False \
+    --max_seq_len 256 \
+    --micro_batch_size 128 \
+    --max_steps 2000 \
+    --checkpoint_steps 400 \
+    --save_steps 200 \
+    --logging_freq 200 \
+    --eval_freq 200
+```
+
+* 施工方案
+
+| 数据 | 句子数量 | tokens数 | 备注 |
+| --- | --- | --- | --- |
+|原数据| 原文件4636|去重后文件3670|文件去重 compare_file|
+|原数据| 5231733|141801639|转成excel格式 get_excel|
+|filter| 2686421|85665489|应用过滤规则 get_filter |
+|mid | 1547546|58761510|合并去重分组操作 get_mid |
+|final | 783714|58041789|文本拼接 get_final |
+
+
+* 施工方案+成本+工艺手册
+    * Total sentences num: 1197619
+    * Total documents num: 51171
+    * Total tokens num: 62166983
+    * Average tokens per sentence: 51.91
+    * Average tokens per document: 1214.89
+    
+```bash
+
+```
+
+ <br>
 
 **以下循环操作**
 * 增加数据
@@ -195,8 +248,6 @@ final 是根据(末尾特定符号) 判断是否添加换行符,是否合并
 *  基础模型选择
 *  超参选择
 *  模型对比验证
-
-
 
 
 
