@@ -237,7 +237,23 @@ python -u -m paddle.distributed.launch \
     * Average tokens per document: 1214.89
     
 ```bash
-
+python -u -m paddle.distributed.launch \
+    --gpus "0,1,2,3" \
+    --log_dir "output/${MODEL_NAME}/logs" \
+    run_pretrain.py \
+    --model_name_or_path ${MODEL_NAME} \
+    --tokenizer_name_or_path ${MODEL_NAME} \
+    --input_dir  /home/Algorithm_Frame/LLM/ernie-1.0/data_file/output_data \
+    --output_dir output/${MODEL_NAME} \
+    --split 198,1,1 \
+    --binary_head False \
+    --max_seq_len 256 \
+    --micro_batch_size 256 \
+    --max_steps 117000 \
+    --checkpoint_steps 2000 \
+    --save_steps 1200 \
+    --logging_freq 1200 \
+    --eval_freq 1200
 ```
 
  <br>
