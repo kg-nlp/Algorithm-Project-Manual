@@ -11,3 +11,4 @@ sort: 10
 <!-- {% include list.liquid %} -->
 
 * [算法汇总](https://kg-nlp.github.io/Algorithm-Project-Manual/文本匹配/算法汇总.html)
+* [常用知识](https://kg-nlp.github.io/Algorithm-Project-Manual/文本匹配/常用知识.html)
