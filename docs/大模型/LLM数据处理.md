@@ -249,7 +249,7 @@ python -u -m paddle.distributed.launch \
     --binary_head False \
     --max_seq_len 256 \
     --micro_batch_size 256 \
-    --max_steps 117000 \
+    --max_steps 11700 \
     --checkpoint_steps 2000 \
     --save_steps 1200 \
     --logging_freq 1200 \
