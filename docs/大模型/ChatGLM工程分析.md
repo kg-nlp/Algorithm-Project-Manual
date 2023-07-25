@@ -10,7 +10,9 @@ sort: 7
 * [个人知乎](https://www.zhihu.com/people/zhangyj-n)
 
 
+[GLM-130B](https://github.com/THUDM/GLM-130B/blob/main/README_zh.md)
 
+GLM-130B 是一个开源开放的双语（中文和英文）双向稠密模型，拥有1300亿个参数，模型架构采用通用语言模型（GLM）。
 
 [ChatGLM2-6B](https://github.com/THUDM/ChatGLM2-6B)
 
@@ -22,5 +24,53 @@ ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本，�
 * **更开放的协议**：ChatGLM2-6B 权重对学术研究完全开放，在获得官方的书面许可后，亦允许商业使用。如果您发现我们的开源模型对您的业务有用，我们欢迎您对下一代模型 ChatGLM3 研发的捐赠。
 
 
+
+
 [2023/07/04] 发布 P-Tuning v2 与 全参数微调脚本，参见 [P-Tuning](https://github.com/THUDM/ChatGLM2-6B/tree/main/ptuning)。
 
+
+## 部署
+* 启动
+
+```bash
+
+ln -s /opt/conda/bin/streamlit /usr/local/bin/streamlit
+streamlit run web_demo2.py --server.port 7020
+网页访问:
+访问 http://10.0.79.103:7020
+```
+
+```
+post请求
+curl -X POST "http://10.0.79.103:7030/chatglm" \
+     -H 'Content-Type: application/json' \
+     -d '{"prompt": "你好", "history": []}'
+```
+
+
+* API请求
+  * url: http://10.0.79.103:7030/chatglm
+  * 请求格式: 
+  ```
+    {
+        "prompt":"",
+        "history": [],
+        "max_length": "",
+        "top_p":"",
+        "temperature":""
+    }
+  ```
+  * 返回格式:
+  ```
+     {
+    "response": "。",
+    "history": [
+        [
+            "",
+            ""
+        ]
+    ],
+    "status": 200,
+    "time": "2023-07-25 09:47:00"
+    }
+    ```

@@ -165,7 +165,7 @@ sort: 5
 
 ## 参考 
 * [1] [A Survey of Large Language Models](https://arxiv.org/abs/2303.18223)  
-* [2] [A Survey of Large Language Modelsgithub](https://github.com/RUCAIBox/LLMSurvey/tree/main)  
+* [2] [A Survey of Large Language Models github](https://github.com/RUCAIBox/LLMSurvey/tree/main)  
 * [3] [人大发表迄今为止最大最全的大模型综述](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247521215&idx=1&sn=bd4ac9718edd2e67e27a124441c94cc8&chksm=eb53872cdc240e3a6946073ccfdcbf2d4563d39d0fd42884e33b387c67ee6c2070fea2494965&mpshare=1&scene=2&srcid=0707gJFH8AWsFrWym2TJwqto&sharer_sharetime=1688710023091&sharer_shareid=225eb5292c43eed8f6e53f73d8e5205d#rd)
 
 
@@ -183,6 +183,8 @@ sort: 5
     * [Firefly QLoRA+百万数据，多卡高效微调bloom-7b1模型](https://mp.weixin.qq.com/s/lA4YUJ9XGpKlUUUjz0Le-g)  
 * [ChatGLM2-6B 发布：性能大幅提升，8-32k上下文，推理提速42%](https://mp.weixin.qq.com/s/zDf9YbOEc681Otcjh0FJxw)
 * [GLM-130B：开放的中英双语预训练模型](https://github.com/THUDM/GLM-130B/blob/main/README_zh.md)
+* [Baichuan-13B](https://github.com/baichuan-inc/Baichuan-13B)
+* [OpenBuddy](https://github.com/OpenBuddy/OpenBuddy/blob/main/README.zh.md)
 
 ### 微调
 
@@ -199,6 +201,7 @@ sort: 5
 
 ### 其他
 
+* [Awesome Pretrained Chinese NLP Models](https://github.com/lonePatient/awesome-pretrained-chinese-nlp-models/tree/main)
 * [大模型微调究竟需要多少数据？](https://mp.weixin.qq.com/s/DVH-vlOpGik8iwW4KnPlkw)
 * [ACL2023大模型如何快速构建指令遵循数据集？Self-Instruct：只需175条种子数据追上InstructGPT](https://mp.weixin.qq.com/s/ehEM04xmeJyqB4z7rmLKBQ)
 * [从 FlashAttention 到 PagedAttention, 如何进一步优化 Attention 性能](https://zhuanlan.zhihu.com/p/638468472)
@@ -214,6 +217,12 @@ sort: 5
 * [LLaMA 2技术细节详细介绍！](https://mp.weixin.qq.com/s/zGQpxp865xuOIKD6e6dBVQ)
     *  Llama 2 模型接受了 2 万亿个标记的训练，上下文长度是 Llama 1 的两倍。Llama-2-chat 模型还接受了超过 100 万个新的人类注释的训练。
     *  Llama2训练语料相比LLaMA多出40%，上下文长度是由之前的2048升级到4096，可以理解和生成更长的文本。
+* [GPT类模型的几个常用参数](https://juejin.cn/post/7236558485290631205)
+    * temperature:用于控制模型输出的结果的随机性，这个值越大随机性越大。一般我们多次输入相同的prompt之后，模型的每次输出都不一样。一般来说，prompt 越长，描述得越清楚，模型生成的输出质量就越好，置信度越高，这时可以适当调高 temperature 的值；反过来，如果 prompt 很短，很含糊，这时再设置一个比较高的 temperature 值，模型的输出就很不稳定了。
+    *    greedy decoding: 总是选择最高分的 token，有用但是有些弊端，详见下文
+    *    top-k: 从 tokens 里选择 k 个作为候选，然后根据它们的 likelihood scores 来采样
+    *    top-p: 候选词列表是动态的，从 tokens 里按百分比选择候选词
+
 
 ## 数据处理+模型训练
 
@@ -228,8 +237,6 @@ sort: 5
     * 分类算法准备(需要准备数据集)保证精确率
     * 流畅度模型准备
 * 开始提取提示数据(SFT),需要格式清洗的文档构建,减少规则编写
-
-
 
 
 
