@@ -25,7 +25,6 @@ ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本，�
 
 
 
-
 [2023/07/04] 发布 P-Tuning v2 与 全参数微调脚本，参见 [P-Tuning](https://github.com/THUDM/ChatGLM2-6B/tree/main/ptuning)。
 
 
@@ -74,3 +73,67 @@ curl -X POST "http://10.0.79.103:7030/chatglm" \
     "time": "2023-07-25 09:47:00"
     }
     ```
+
+```python
+# -*- coding:utf-8 -*-
+'''
+# @FileName    :request.py
+---------------------------------
+# @Time        :2023/7/25 
+# @Author      :
+# @Email       :
+---------------------------------
+# 目标任务 :   chatglm-2-6b 和 baichuan13b 模型服务
+# 二期环境: 10.0.79.103
+# chatglm-2-6b 网页端  http://10.0.79.103:7020
+# baichuan13b 网页端  http://10.0.79.103:7000
+---------------------------------
+'''
+
+import json
+import requests
+headers = {
+  "Content-Type": "application/json"
+}
+def get_chatglm_info(data:dict)->dict:
+    raw_data = json.dumps(data)
+    res = requests.post("http://10.0.79.103:7030/chatglm",headers=headers, data=raw_data)  # ChatGLM访问
+
+    result = json.loads(res.text)
+    print(json.dumps(result,indent=False,ensure_ascii=False))
+    return result
+
+def get_baichuan_info(data:dict)->dict:
+    raw_data = json.dumps(data)
+    res = requests.post("http://10.0.79.103:7010/baichuan",headers=headers, data=raw_data)  # baichuan访问
+
+    result = json.loads(res.text)
+    print(json.dumps(result,indent=False,ensure_ascii=False))
+    return result
+
+
+
+if __name__ == "__main__":
+
+    # chatglm请求示例
+    chatglm_data = {
+        "prompt":"",
+        "history": [],
+        "max_length": "",
+        "top_p":"",
+        "temperature":""
+    }
+
+    # baichuan请求示例
+    baichuan_data = {
+        "prompt":""
+    }
+
+    get_chatglm_info(chatglm_data)
+    get_baichuan_info(baichuan_data)
+
+
+
+
+
+```
