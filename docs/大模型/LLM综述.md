@@ -222,7 +222,8 @@ sort: 5
     *    greedy decoding: 总是选择最高分的 token，有用但是有些弊端，详见下文
     *    top-k: 从 tokens 里选择 k 个作为候选，然后根据它们的 likelihood scores 来采样
     *    top-p: 候选词列表是动态的，从 tokens 里按百分比选择候选词
-
+* [0718-LLaMA2讨论-Memo](https://d7mv45xi4m.feishu.cn/docx/OOhedFKGao2jlmxgsKGcCTnEnUc)
+* [0723-LLaMA2第二次讨论-Memo](https://d7mv45xi4m.feishu.cn/docx/DOHIdmpbCoXhRwx62cCc3RcEnCh)
 
 ## 数据处理+模型训练
 
