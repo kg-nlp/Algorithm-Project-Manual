@@ -19,6 +19,8 @@
 * [机器学习](https://kg-nlp.github.io/Algorithm-Project-Manual/机器学习/)
 * [文本分类](https://kg-nlp.github.io/Algorithm-Project-Manual/文本分类/)
 * [文本匹配](https://kg-nlp.github.io/Algorithm-Project-Manual/文本匹配/)
+* [推荐系统](https://kg-nlp.github.io/Algorithm-Project-Manual/推荐系统/)
+
 
 ## 等待迁移
 
@@ -30,12 +32,5 @@
 * [模型压缩](https://kg-nlp.github.io/Algorithm-Project-Manual/模型压缩/)
 * [文本生成](https://kg-nlp.github.io/Algorithm-Project-Manual/文本生成/)
 * [检索系统](https://kg-nlp.github.io/Algorithm-Project-Manual/检索系统/)
-* [推荐系统](https://kg-nlp.github.io/Algorithm-Project-Manual/推荐系统/)
 * [知识图谱](https://kg-nlp.github.io/Algorithm-Project-Manual/知识图谱/)   
 * [机构学](https://kg-nlp.github.io/Algorithm-Project-Manual/机构学/)
-
-
-
-
-
-
