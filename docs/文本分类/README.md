@@ -18,3 +18,4 @@ sort: 9
 <!-- {% include list.liquid %} -->
 
 * [分类常见问题](https://kg-nlp.github.io/Algorithm-Project-Manual/文本分类/分类常见问题.html)
+* [场景实践(一)](https://kg-nlp.github.io/Algorithm-Project-Manual/文本分类/场景实践(一).html)

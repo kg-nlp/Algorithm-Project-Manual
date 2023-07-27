@@ -185,6 +185,7 @@ sort: 5
 * [GLM-130B：开放的中英双语预训练模型](https://github.com/THUDM/GLM-130B/blob/main/README_zh.md)
 * [Baichuan-13B](https://github.com/baichuan-inc/Baichuan-13B)
 * [OpenBuddy](https://github.com/OpenBuddy/OpenBuddy/blob/main/README.zh.md)
+* [MOSS](https://github.com/OpenLMLab/MOSS)
 
 ### 微调
 
@@ -198,6 +199,7 @@ sort: 5
 *  [LLaMA, ChatGLM, BLOOM的参数高效微调实践](https://zhuanlan.zhihu.com/p/635710004)
 * [650亿参数，8块GPU就能全参数微调：邱锡鹏团队把大模型门槛打下来了](https://mp.weixin.qq.com/s/339iXf2bimusfq6zQmFpWw)
 * [微调百川Baichuan-13B保姆式教程，手把手教你训练百亿大模型](https://mp.weixin.qq.com/s/ZBY6kbogHjbCQvZBzNEqag)
+* [Firefly增强Baichuan-13B的多轮对话能力](https://mp.weixin.qq.com/s/djO8Tg3emmy6wzw_rTUlcw)
 
 ### 其他
 
