@@ -226,7 +226,7 @@ sort: 5
     *    top-p: 候选词列表是动态的，从 tokens 里按百分比选择候选词
 * [0718-LLaMA2讨论-Memo](https://d7mv45xi4m.feishu.cn/docx/OOhedFKGao2jlmxgsKGcCTnEnUc)
 * [0723-LLaMA2第二次讨论-Memo](https://d7mv45xi4m.feishu.cn/docx/DOHIdmpbCoXhRwx62cCc3RcEnCh)
-
+* [大模型人类对齐方法综述](https://mp.weixin.qq.com/s/Df_GbvhLRndeold4lkHRaA)
 ## 数据处理+模型训练
 
 ### 数据处理
