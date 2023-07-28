@@ -210,6 +210,7 @@ sort: 5
 * [LLM从零开始训练大模型](https://zhuanlan.zhihu.com/p/636270877)
 * [大模型LLM知识整理](https://zhuanlan.zhihu.com/p/641109766)
 * [预训练模型微调的原理](https://zhuanlan.zhihu.com/p/35890660)
+* [Don't Stop Pretraining](https://zhuanlan.zhihu.com/p/375203594)
 * [大模型时代-行业落地的再思考](https://mp.weixin.qq.com/s/ewI4FKX_R30E5fF6p2GYUQ)
 * [灾难性遗忘](https://www.zhihu.com/question/265056068)
 * [腾讯预训练模型框架](https://github.com/Tencent/TencentPretrain/blob/main/README_ZH.md)
