@@ -20,6 +20,7 @@
 * [文本分类](https://kg-nlp.github.io/Algorithm-Project-Manual/文本分类/)
 * [文本匹配](https://kg-nlp.github.io/Algorithm-Project-Manual/文本匹配/)
 * [推荐系统](https://kg-nlp.github.io/Algorithm-Project-Manual/推荐系统/)
+* [表格解析](https://kg-nlp.github.io/Algorithm-Project-Manual/表格解析/)
 
 
 ## 等待迁移
