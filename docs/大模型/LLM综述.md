@@ -189,13 +189,22 @@ sort: 5
 
 ### 微调
 
-*  [大模型参数高效微调技术原理综述（一）-背景、参数高效微调简介](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)  
-*  [大模型参数高效微调技术原理综述（二）-BitFit、Prefix Tuning、Prompt Tuning](https://mp.weixin.qq.com/s/fUAUr9X3XLndfjga2QIHbA)
-*  [大模型参数高效微调技术原理综述（三）-P-Tuning、P-Tuning v2](https://mp.weixin.qq.com/s/f4l04f78F507JRrCawnV8w)
-*  [大模型参数高效微调技术原理综述（四）-Adapter Tuning及其变体](https://mp.weixin.qq.com/s/nUAcCz6mcgGuUeuTfgqmOQ)
-*  [大模型参数高效微调技术原理综述（五）-LoRA、AdaLoRA、QLoRA](https://mp.weixin.qq.com/s/N_N6RqKB9pjZ1tozfM5f5A)
-*  [大模型参数高效微调技术原理综述（六）-MAM Adapter、UniPELT](https://mp.weixin.qq.com/s/M2nds_FJBXooi08qDU-4yA)
-*  [大模型参数高效微调技术原理综述（七）-最佳实践、总结](https://mp.weixin.qq.com/s/P_AmTa4s8dOyc_0fZBgNPA)
+*  [llm-action-github](https://github.com/liguodongiot/llm-action)
+    * 🔥 LLM训练
+        * 🐫 LLM训练实战
+        * 🐼 LLM参数高效微调技术原理综述
+        * 🐰 LLM参数高效微调技术实战
+        * 🐘 LLM分布式训练并行技术
+        * 🌋 分布式AI框架
+        * 📡 分布式训练网络通信
+        * 大模型结构与算法
+    * 🐎 LLM推理
+        * 🚀 模型推理加速
+        * ✈  型推理服务化
+        * 📐 LLM量化
+    * 🧩 LLM应用开发
+    * 🀄 LLM国产化适配
+    * 🍄 LLM生态相关技术
 *  [LLaMA, ChatGLM, BLOOM的参数高效微调实践](https://zhuanlan.zhihu.com/p/635710004)
 * [650亿参数，8块GPU就能全参数微调：邱锡鹏团队把大模型门槛打下来了](https://mp.weixin.qq.com/s/339iXf2bimusfq6zQmFpWw)
 * [微调百川Baichuan-13B保姆式教程，手把手教你训练百亿大模型](https://mp.weixin.qq.com/s/ZBY6kbogHjbCQvZBzNEqag)
