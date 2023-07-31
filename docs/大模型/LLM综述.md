@@ -238,7 +238,12 @@ sort: 5
 * [0718-LLaMA2讨论-Memo](https://d7mv45xi4m.feishu.cn/docx/OOhedFKGao2jlmxgsKGcCTnEnUc)
 * [0723-LLaMA2第二次讨论-Memo](https://d7mv45xi4m.feishu.cn/docx/DOHIdmpbCoXhRwx62cCc3RcEnCh)
 * [大模型人类对齐方法综述](https://mp.weixin.qq.com/s/Df_GbvhLRndeold4lkHRaA)
+* [Transformer for Machine Learning: A Deep Dive](https://github.com/CRCTransformers/deepdive-book)
+ 
+
+
 ## 数据处理+模型训练
+
 
 ### 数据处理
 
