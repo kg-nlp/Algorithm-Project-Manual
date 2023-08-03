@@ -21,7 +21,7 @@
 * [文本匹配](https://kg-nlp.github.io/Algorithm-Project-Manual/文本匹配/)
 * [推荐系统](https://kg-nlp.github.io/Algorithm-Project-Manual/推荐系统/)
 * [表格解析](https://kg-nlp.github.io/Algorithm-Project-Manual/表格解析/)
-
+* [向量表示](https://kg-nlp.github.io/Algorithm-Project-Manual/向量表示/)
 
 ## 等待迁移
 
