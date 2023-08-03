@@ -186,7 +186,7 @@ sort: 5
 * [Baichuan-13B](https://github.com/baichuan-inc/Baichuan-13B)
 * [OpenBuddy](https://github.com/OpenBuddy/OpenBuddy/blob/main/README.zh.md)
 * [MOSS](https://github.com/OpenLMLab/MOSS)
-
+* [书生·浦语](https://github.com/InternLM/InternLM/blob/main/README-zh-Hans.md)
 ### 微调
 
 *  [llm-action-github](https://github.com/liguodongiot/llm-action)
@@ -239,6 +239,7 @@ sort: 5
 * [0723-LLaMA2第二次讨论-Memo](https://d7mv45xi4m.feishu.cn/docx/DOHIdmpbCoXhRwx62cCc3RcEnCh)
 * [大模型人类对齐方法综述](https://mp.weixin.qq.com/s/Df_GbvhLRndeold4lkHRaA)
 * [Transformer for Machine Learning: A Deep Dive](https://github.com/CRCTransformers/deepdive-book)
+* [Transformer深入浅出](https://mp.weixin.qq.com/s/iBVNkvfz8usZTpPLRcghRA)
  
 
 
