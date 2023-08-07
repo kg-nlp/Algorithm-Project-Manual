@@ -167,7 +167,7 @@ sort: 5
 * [1] [A Survey of Large Language Models](https://arxiv.org/abs/2303.18223)  
 * [2] [A Survey of Large Language Models github](https://github.com/RUCAIBox/LLMSurvey/tree/main)  
 * [3] [人大发表迄今为止最大最全的大模型综述](https://mp.weixin.qq.com/s?__biz=MzI3ODgwODA2MA==&mid=2247521215&idx=1&sn=bd4ac9718edd2e67e27a124441c94cc8&chksm=eb53872cdc240e3a6946073ccfdcbf2d4563d39d0fd42884e33b387c67ee6c2070fea2494965&mpshare=1&scene=2&srcid=0707gJFH8AWsFrWym2TJwqto&sharer_sharetime=1688710023091&sharer_shareid=225eb5292c43eed8f6e53f73d8e5205d#rd)
-
+* [4] [大语言模型综述中文版-202308-LLM_Survey_Chinese](https://kdocs.cn/l/ce64NiRAZDeO)
 
 ## 资源汇总
 
@@ -211,7 +211,7 @@ sort: 5
 * [650亿参数，8块GPU就能全参数微调：邱锡鹏团队把大模型门槛打下来了](https://mp.weixin.qq.com/s/339iXf2bimusfq6zQmFpWw)
 * [微调百川Baichuan-13B保姆式教程，手把手教你训练百亿大模型](https://mp.weixin.qq.com/s/ZBY6kbogHjbCQvZBzNEqag)
 * [Firefly增强Baichuan-13B的多轮对话能力](https://mp.weixin.qq.com/s/djO8Tg3emmy6wzw_rTUlcw)
-
+* [大模型LLM微调经验总结&项目更新](https://mp.weixin.qq.com/s/wBWpjoMSLgUXammnv0kuAw)
 ### 其他
 
 * [Awesome Pretrained Chinese NLP Models](https://github.com/lonePatient/awesome-pretrained-chinese-nlp-models/tree/main)
@@ -242,8 +242,7 @@ sort: 5
 * [大模型人类对齐方法综述](https://mp.weixin.qq.com/s/Df_GbvhLRndeold4lkHRaA)
 * [Transformer for Machine Learning: A Deep Dive](https://github.com/CRCTransformers/deepdive-book)
 * [Transformer深入浅出](https://mp.weixin.qq.com/s/iBVNkvfz8usZTpPLRcghRA)
- 
-
+* [综述LLM的当前挑战和应用](https://mp.weixin.qq.com/s/wih8sNHCQKEfazpYwGhXaA)
 
 ## 数据处理+模型训练
 
