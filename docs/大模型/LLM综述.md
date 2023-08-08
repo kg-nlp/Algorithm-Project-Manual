@@ -188,6 +188,9 @@ sort: 5
 * [MOSS](https://github.com/OpenLMLab/MOSS)
 * [书生·浦语](https://github.com/InternLM/InternLM/blob/main/README-zh-Hans.md)
 * [通义千文](https://github.com/QwenLM/Qwen-7B/blob/main/README_CN.md)
+* [XVERSE-13B](https://github.com/xverse-ai/XVERSE-13B)
+
+
 
 ### 微调
 
