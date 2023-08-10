@@ -32,7 +32,7 @@ sort: 4
 * [基于ChatGLM2-6B 和 LangChain 的 Agents 实现：Prompt Template、Tools 和 Agents（下）](https://zhuanlan.zhihu.com/p/642703708)
 
 * 常用问答设计
-* 
+
 ```bash
 
 请根据上下文来回答问题，
@@ -47,6 +47,7 @@ sort: 4
 
 回答：
 ```
+
 
 ```bash
 请根据下面带'''分隔符的文本来回答问题。
