@@ -25,7 +25,6 @@ sort: 4
 
 ```
 
-
 ## prompt设计
 
 * [Prompt设计](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/Prompt设计.html)
@@ -33,7 +32,9 @@ sort: 4
 * [基于ChatGLM2-6B 和 LangChain 的 Agents 实现：Prompt Template、Tools 和 Agents（下）](https://zhuanlan.zhihu.com/p/642703708)
 
 * 常用问答设计
+* 
 ```bash
+
 请根据上下文来回答问题，
 如果上下文的信息无法回答问题，请回答"我不知道"。
 
@@ -48,9 +49,9 @@ sort: 4
 ```
 
 ```bash
-请根据下面带```分隔符的文本来回答问题。
+请根据下面带'''分隔符的文本来回答问题。
 如果该文本中没有相关内容可以回答问题，请直接回复：“抱歉，该问题需要更多上下文信息。”
-```{text}```
+'''{text}'''
 问题：{query}
 ```
 
