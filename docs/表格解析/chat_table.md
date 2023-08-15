@@ -9,7 +9,15 @@ sort: 4
 
 * [个人知乎](https://www.zhihu.com/people/zhangyj-n)
 
+
+
 ## 赛题类型
+
+> 2023金融大模型比赛
+* [代码仓库](https://github.com/kg-nlp/SMP_2023_ChatGLM/tree/main)
+> 目前只有小组成员可以访问
+
+[赛事介绍](https://tianchi.aliyun.com/competition/entrance/532126/introduction)
 ```
 初级：数据基本查询（40分）
 
@@ -25,56 +33,6 @@ sort: 4
 
 ```
 
-## prompt设计
+## baseline
 
-* [Prompt设计](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/Prompt设计.html)
-
-* [基于ChatGLM2-6B 和 LangChain 的 Agents 实现：Prompt Template、Tools 和 Agents（下）](https://zhuanlan.zhihu.com/p/642703708)
-
-* 常用问答设计
-
-```bash
-
-请根据上下文来回答问题，
-如果上下文的信息无法回答问题，请回答"我不知道"。
-
-上下文：
-"""
-{根据用户输入的问题，从向量数据库查询的结果。一行一个}
-"""
-
-问题："""{用户输入的问题}"""
-
-回答：
-```
-
-
-```bash
-请根据下面带'''分隔符的文本来回答问题。
-如果该文本中没有相关内容可以回答问题，请直接回复：“抱歉，该问题需要更多上下文信息。”
-'''{text}'''
-问题：{query}
-```
-
-
-## 工程化
-
-* 采取常规检索+LLM汇总方法
-    * 常规检索问答是否加入模型意图识别,模型实体识别(现阶段不作)
-* 整个流程分为以下几个模块:
-    * 数据入库处理模块
-        * 非结构化文本拼接,拆分
-        * 关键词库
-    * 关键词检索模块
-        * 搭建ES库,构造非结构化文本索引和结构化表格索引
-        * 替换分词库,如有同义词库则增加
-    * 排序模块
-        * 使用bge或m3e计算语义相似度召回
-        * 上述效果不好使用比赛数据训练自监督语义模型,重新进行向量召回
-        * 上述方法作为粗排召回,可以增加开源交互模型作为精排测试效果(不单独训练精排模型)
-        * 向量召回使用milvus引擎
-    * LLM模块
-        * 使用上述关键词检索和排序召回的结果,TOPN的设置以tokens为限制,原则上ChatGLM2-6b可以最长32k,但采取召回数据越多,文本越长,经LLM推理,总结后结果越差,目前暂定使用TOP5数据,文本长度<1024
-        * 提示词工程,针对ChatGLM需要不断试错
-    
-* 预计周日搭建完系统
+* [SMP 2023 ChatGLM 金融大模型挑战赛 60 分 Baseline 思路](https://github.com/RonaldJEN/FinanceChatGLM/tree/main)
