@@ -172,6 +172,12 @@ sort: 5
 ## 资源汇总
 
 
+![大模型面试基础｜秋招
+](https://pic1.zhimg.com/v2-f8edb6f67f0aade01a70c198999c92c2_1440w.jpg?source=172ae18b)
+* [大模型面试基础｜秋招](https://zhuanlan.zhihu.com/p/649241113)
+
+
+
 ### 模型
 * [Lawyer LLaMA](https://github.com/AndrewZhe/lawyer-llama)
     * [基于chinese-llama-plus北大团队推出法律大模型，数据与模型全部开源，模型合并使用全流程](https://mp.weixin.qq.com/s/WtBwSPZ7jCzJNk3aQVllUQ)
@@ -246,6 +252,10 @@ sort: 5
 * [Transformer for Machine Learning: A Deep Dive](https://github.com/CRCTransformers/deepdive-book)
 * [Transformer深入浅出](https://mp.weixin.qq.com/s/iBVNkvfz8usZTpPLRcghRA)
 * [综述LLM的当前挑战和应用](https://mp.weixin.qq.com/s/wih8sNHCQKEfazpYwGhXaA)
+* [关于检索增强下大模型知识边界的探索](https://mp.weixin.qq.com/s/G60VI3sJiMXmZxGoIBUO6Q)
+* 
+
+
 
 ## 数据处理+模型训练
 

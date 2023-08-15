@@ -55,6 +55,12 @@ sort: 11
 
 ### 方法总结
 
+数据来源
+数据组成(哪些字段,哪种类型)
+数据解析(提取txt)
+数据清洗(清除杂质,文本拼接)
+数据过滤(去重,无效数据)
+数据质量(完整语句,清晰语义)
 
 
 * 第一阶段提取数据
@@ -104,9 +110,9 @@ sort: 11
 | 工艺手册 | 多为pdf和doc    | 225M  |
 | 施工方案 | doc,txt          | 472M  |
 | 规范搜索 | txt,doc,pdf,docx  | 9.41G  |
-| 论文数据 | pdf          | 351M  |
+| 论文数据 | docx         | 1.4G  |
 | 合同数据 | pdf,doc,xls等 | 9.44G |
-| 业务数据 |jsonl等|53.5M|
+| 业务数据 | jsonl等|53.5M|
 
 ## 数据处理结果
 
@@ -164,13 +170,13 @@ final 是根据(末尾特定符号) 判断是否添加换行符,是否合并
  
 ### 20230727 第二轮数据处理结果
 
-* 本次增加施工方案数据,成本数据,论文数据
+* 本次增加施工方案数据,成本数据
     * 增加规则处理方法
-    * 增加分类模型,通顺度检测模型
+    * 增加分类模型,通顺度检测模型(未增加)
 * 使用预训练框架: paddle和tencent
 * 场景任务验证
-    * 分类任务:CDE
-    * 信息抽取任务:合同
+    * 分类任务:CDE(已验证)
+    * 信息抽取任务:合同(未验证)
 
  
 > 脚本位置:  /home/Algorithm_Frame/LLM/process/core/CDE业务数据处理.py
@@ -220,6 +226,9 @@ python -u -m paddle.distributed.launch \
 
 * 施工方案
 
+> 脚本位置:  /home/Algorithm_Frame/LLM/process/core/CDE施工数据处理.py
+
+
 | 数据 | 句子数量 | tokens数 | 备注 |
 | --- | --- | --- | --- |
 |原数据| 原文件4636|去重后文件3670|文件去重 compare_file|
@@ -235,6 +244,14 @@ python -u -m paddle.distributed.launch \
     * Total tokens num: 62166983
     * Average tokens per sentence: 51.91
     * Average tokens per document: 1214.89
+
+* 数据大小
+
+|类型|大小|句子数量(累计)|tokens(累计)|
+|---|---|---|---|
+|工艺手册|11.7M|82609|4197617|
+|成本清单|5.06M|101057|5549871|
+|施工数据|159M|1197619|62166983|
     
 ```bash
 python -u -m paddle.distributed.launch \
@@ -256,6 +273,80 @@ python -u -m paddle.distributed.launch \
     --eval_freq 1200
 ```
 
+### 20230806 第三轮数据处理结果
+
+* 本次增加论文数据,规范数据
+    * 增加规则处理方法
+    * 增加分类模型,通顺度检测模型(有时间扩充数据)
+* 使用预训练框架: paddle
+* 场景任务验证
+    * 分类任务:CDE
+
+ 
+> 脚本位置:  /home/Algorithm_Frame/LLM/process/core/CDE论文数据处理.py  
+> 脚本位置:  /home/Algorithm_Frame/LLM/process/core/CDE规范数据处理.py
+  
+  
+* 论文数据
+
+| 数据 | 句子数量 | tokens数 | 备注 |
+| --- | --- | --- | --- |
+|原数据| 418555|28387238|转成excel格式 get_excel|
+|filter| 221548|9794638|应用过滤规则 get_filter |
+|mid | 193271|9477326|合并去重分组操作 get_mid |
+|final | 57110|9400626|文本拼接 get_final |
+ 
+* 规范数据
+
+| 数据 | 句子数量 | tokens数 | 备注 |
+| --- | --- | --- | --- |
+|原数据| 882242|34736539|转成excel格式 get_excel|
+|filter| 550466|19291905|应用过滤规则 get_filter |
+|mid | 426012|15920029|合并去重分组操作 get_mid |
+|final | 206571|15864233|文本拼接 get_final |
+ 
+ 
+
+* 成本+工艺手册+施工方案+论文数据+规范数据
+    * all_doc_ids [12052   397 12053 ...   488 40413 12043] (85769452,)
+    * lens [ 31  35  35 ... 337  88  63] (85769452,)
+    * docs [      0      43      73 ... 1618600 1618603 1618639] (66138,)
+    * Total sentences num: 1608787
+    * Total documents num: 1608787
+    * Total tokens num: 85769452
+    * Average tokens per sentence: 53.31
+    * Average tokens per document: 53.31
+
+
+* 数据大小
+
+|类型|jsonl文件大小|句子数量(累计)|tokens(累计)|
+|---|---|---|---|
+|工艺手册|11.7M|82609|4197617|
+|成本清单|5.06M|101057|5549871|
+|施工数据|159M|1197619|62166983|
+|论文+规范|26.4+43.5=69.9M|1618639|86766539|
+
+```bash
+python -u -m paddle.distributed.launch \
+    --gpus "0,1,2,3" \
+    --log_dir "output/20230806第三轮测试/${MODEL_NAME}/logs" \
+    run_pretrain.py \
+    --model_name_or_path ${MODEL_NAME} \
+    --tokenizer_name_or_path ${MODEL_NAME} \
+    --input_dir  /home/Algorithm_Frame/LLM/ernie-1.0/data_file/output_data \
+    --output_dir output/20230806第三轮测试/${MODEL_NAME} \
+    --split 198,1,1 \
+    --binary_head False \
+    --max_seq_len 256 \
+    --micro_batch_size 256 \
+    --max_steps 8000 \
+    --checkpoint_steps 800 \
+    --save_steps 800 \
+    --logging_freq 800 \
+    --eval_freq 800
+```
+
  <br>
 
 **以下循环操作**
@@ -270,6 +361,4 @@ python -u -m paddle.distributed.launch \
 ## 参考
 
 * [Falcon Paper 我们是靠洗数据洗败 LLaMA 的！](https://zhuanlan.zhihu.com/p/637996787)
-
-
 
