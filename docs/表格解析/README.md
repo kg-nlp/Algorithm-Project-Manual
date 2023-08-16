@@ -12,3 +12,4 @@ sort: 12
 * [工程实践](https://kg-nlp.github.io/Algorithm-Project-Manual/表格解析/工程实践.html)
 * [调研报告](https://kg-nlp.github.io/Algorithm-Project-Manual/表格解析/调研报告.html)
 * [chat_table](https://kg-nlp.github.io/Algorithm-Project-Manual/表格解析/chat_table.html)
+* [表格提取方法](https://kg-nlp.github.io/Algorithm-Project-Manual/表格解析/表格提取方法.html)
