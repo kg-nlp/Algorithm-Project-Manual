@@ -4,7 +4,9 @@ sort: 1
 
 # MrDoc文档
 
+* [算法开发手册](https://kg-nlp.github.io/Algorithm-Project-Manual/开发工具/MrDoc文档.html)
 
+* [个人知乎](https://www.zhihu.com/people/zhangyj-n)
 
 ##  普通安装
 
