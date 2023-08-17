@@ -20,3 +20,8 @@ sort: 1
 * [垂直领域小模型快速训练（一）](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/垂直领域小模型快速训练（一）.html)
 * [LLM的应用](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/LLM的应用.html)
 * [InternLM工程分析](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/InternLM工程分析.html)
+
+* [LLM资料阅读](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/LLM资料阅读.html)
+
+  
+
