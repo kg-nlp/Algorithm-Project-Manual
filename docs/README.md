@@ -22,6 +22,7 @@
 * [推荐系统](https://kg-nlp.github.io/Algorithm-Project-Manual/推荐系统/)
 * [表格解析](https://kg-nlp.github.io/Algorithm-Project-Manual/表格解析/)
 * [向量表示](https://kg-nlp.github.io/Algorithm-Project-Manual/向量表示/)
+* [开发工具](https://kg-nlp.github.io/Algorithm-Project-Manual/开发工具/)
 
 ## 等待迁移
 
@@ -35,4 +36,14 @@
 * [检索系统](https://kg-nlp.github.io/Algorithm-Project-Manual/检索系统/)
 * [知识图谱](https://kg-nlp.github.io/Algorithm-Project-Manual/知识图谱/)   
 * [机构学](https://kg-nlp.github.io/Algorithm-Project-Manual/机构学/)
+
+
+
+# 更新日志
+
+| 更新日期 | 更新内容                         | 备注 |
+| -------- | -------------------------------- | ---- |
+| 20230817 | 增加开发工具,增加LLM相关资料阅读 |      |
+
+
 
