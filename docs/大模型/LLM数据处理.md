@@ -167,7 +167,7 @@ final 是根据(末尾特定符号) 判断是否添加换行符,是否合并
 [垂直领域小模型快速训练（一）](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/垂直领域小模型快速训练（一）.html)
 
  <br>
-
+ 
 ### 20230727 第二轮数据处理结果
 
 * 本次增加施工方案数据,成本数据
@@ -178,7 +178,7 @@ final 是根据(末尾特定符号) 判断是否添加换行符,是否合并
     * 分类任务:CDE(已验证)
     * 信息抽取任务:合同(未验证)
 
-
+ 
 > 脚本位置:  /home/Algorithm_Frame/LLM/process/core/CDE业务数据处理.py
 
 * 成本数据(数字,字母等符号很多)
@@ -189,7 +189,7 @@ final 是根据(末尾特定符号) 判断是否添加换行符,是否合并
 |filter| 20072|1518167|完全匹配近似匹配去重 get_filter |
 |final | 17428|1453167|公共子串过滤 get_final |
 |jsonl | 17428|1453167|格式转换 get_jsonl |
-
+ 
 
 * 成本+工艺手册
     * all_doc_ids [ 2659 40894  1320 ...    30  2817  9517] (5549871,)
@@ -252,7 +252,7 @@ python -u -m paddle.distributed.launch \
 |工艺手册|11.7M|82609|4197617|
 |成本清单|5.06M|101057|5549871|
 |施工数据|159M|1197619|62166983|
-
+    
 ```bash
 python -u -m paddle.distributed.launch \
     --gpus "0,1,2,3" \
@@ -282,11 +282,11 @@ python -u -m paddle.distributed.launch \
 * 场景任务验证
     * 分类任务:CDE
 
-
+ 
 > 脚本位置:  /home/Algorithm_Frame/LLM/process/core/CDE论文数据处理.py  
 > 脚本位置:  /home/Algorithm_Frame/LLM/process/core/CDE规范数据处理.py
-
-
+  
+  
 * 论文数据
 
 | 数据 | 句子数量 | tokens数 | 备注 |
@@ -295,7 +295,7 @@ python -u -m paddle.distributed.launch \
 |filter| 221548|9794638|应用过滤规则 get_filter |
 |mid | 193271|9477326|合并去重分组操作 get_mid |
 |final | 57110|9400626|文本拼接 get_final |
-
+ 
 * 规范数据
 
 | 数据 | 句子数量 | tokens数 | 备注 |
@@ -304,7 +304,7 @@ python -u -m paddle.distributed.launch \
 |filter| 550466|19291905|应用过滤规则 get_filter |
 |mid | 426012|15920029|合并去重分组操作 get_mid |
 |final | 206571|15864233|文本拼接 get_final |
-
+ 
  
 
 * 成本+工艺手册+施工方案+论文数据+规范数据
@@ -358,7 +358,7 @@ python -u -m paddle.distributed.launch \
 
 > 脚本位置:  /home/Algorithm_Frame/LLM/process/core/CDE合同数据处理.py  
 
-
+  
 * 合同数据
 
 | 数据 | 句子数量 | tokens数 | 备注 |
@@ -368,7 +368,7 @@ python -u -m paddle.distributed.launch \
 |filter| 1248503|52812028|应用过滤规则 get_filter |
 |mid | 324765|13988708|合并去重分组操作 get_mid |
 |final | 162249|13927659|文本拼接 get_final |
-
+ 
 
 
 * 成本+工艺手册+施工方案+论文数据+规范数据+合同数据
@@ -456,6 +456,3 @@ python -u -m paddle.distributed.launch \
 ## 参考
 
 * [Falcon Paper 我们是靠洗数据洗败 LLaMA 的！](https://zhuanlan.zhihu.com/p/637996787)
-
-![](../../图片/数据预处理流程图.jpg)
-
