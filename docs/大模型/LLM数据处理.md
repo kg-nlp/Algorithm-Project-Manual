@@ -359,7 +359,7 @@ python -u -m paddle.distributed.launch \
 > 脚本位置:  /home/Algorithm_Frame/LLM/process/core/CDE合同数据处理.py  
 
 
-* 合同数据
+* 合同数据  
 
 | 数据 | 句子数量 | tokens数 | 备注 |
 | --- | --- | --- | --- |
@@ -381,9 +381,8 @@ python -u -m paddle.distributed.launch \
     * Average tokens per sentence: 54.31
     * Average tokens per document: 1325.96
 
-* 数据大小
+* 数据大小  统计的是jsonl文件    
 
-统计的是jsonl文件
 |类型|jsonl文件大小|句子数量(累计)|tokens(累计)|
 |---|---|---|---|
 |工艺手册|11.7M|82609|4197617|
