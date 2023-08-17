@@ -347,6 +347,101 @@ python -u -m paddle.distributed.launch \
     --eval_freq 800
 ```
 
+### 20230816 第四轮数据处理结果
+
+* 本次增加合同数据
+    * 增加规则处理方法
+* 使用预训练框架: paddle
+* 场景任务验证
+    * 分类任务:CDE
+
+
+> 脚本位置:  /home/Algorithm_Frame/LLM/process/core/CDE合同数据处理.py  
+
+  
+* 合同数据
+
+| 数据 | 句子数量 | tokens数 | 备注 |
+| --- | --- | --- | --- |
+|原数据| 原文件4777|去重后文件3555|文件去重 compare_file|
+|原数据| 1863366|79823481|转成excel格式 get_excel|
+|filter| 1248503|52812028|应用过滤规则 get_filter |
+|mid | 324765|13988708|合并去重分组操作 get_mid |
+|final | 162249|13927659|文本拼接 get_final |
+ 
+
+
+* 成本+工艺手册+施工方案+论文数据+规范数据+合同数据
+    * all_doc_ids [   87 40456  2501 ...  1464 12053 12043] (99486607,)
+    * lens [ 66  64 155 ...  22  21  31] (1831685,)
+    * docs [      0       1       2 ... 1831599 1831634 1831685] (75031,)
+    * Total sentences num: 1831685
+    * Total documents num: 75030
+    * Total tokens num: 99486607
+    * Average tokens per sentence: 54.31
+    * Average tokens per document: 1325.96
+
+* 数据大小
+
+统计的是jsonl文件
+|类型|jsonl文件大小|句子数量(累计)|tokens(累计)|
+|---|---|---|---|
+|工艺手册|11.7M|82609|4197617|
+|成本清单|5.06M|101057|5549871|
+|施工数据|159M|1197619|62166983|
+|论文+规范|26.4+43.5=69.9M|1618639|86766539|
+|合同|39.3M|1831685|99486607|
+
+```bash
+python -u -m paddle.distributed.launch \
+    --gpus "0,1,2,3" \
+    --log_dir "output/20230816第四轮测试/${MODEL_NAME}/logs" \
+    run_pretrain.py \
+    --model_name_or_path /root/.paddlenlp/models/${MODEL_NAME} \
+    --tokenizer_name_or_path /root/.paddlenlp/models/${MODEL_NAME} \
+    --input_dir  /home/Algorithm_Frame/LLM/ernie-1.0/data_file/output_data \
+    --output_dir output/20230816第四轮测试/${MODEL_NAME} \
+    --split 198,1,1 \
+    --binary_head False \
+    --max_seq_len 256 \
+    --micro_batch_size 256 \
+    --max_steps 9000 \
+    --checkpoint_steps 900 \
+    --save_steps 900 \
+    --logging_freq 900 \
+    --eval_freq 900
+```
+
+* 对上面所有的数据训练时保持最大长度2048
+all_doc_ids [   87 40456  2501 ...  1464 12053 12043] (99486607,)
+lens [  66   64 1662 ... 1679 1964 1834] (75030,)
+docs [    0     1     2 ... 75028 75029 75030] (75031,)
+Total sentences num: 75030
+Total documents num: 75030
+Total tokens num: 99486607
+Average tokens per sentence: 1325.96
+Average tokens per document: 1325.96
+
+```bash
+python -u -m paddle.distributed.launch \
+    --gpus "0,1,2,3" \
+    --log_dir "output/20230817第五轮测试/${MODEL_NAME}/logs" \
+    run_pretrain.py \
+    --model_name_or_path /root/.paddlenlp/models/${MODEL_NAME} \
+    --tokenizer_name_or_path /root/.paddlenlp/models/${MODEL_NAME} \
+    --input_dir  /home/Algorithm_Frame/LLM/ernie-1.0/data_file/output_data \
+    --output_dir output/20230817第五轮测试/${MODEL_NAME} \
+    --split 198,1,1 \
+    --binary_head False \
+    --max_seq_len 2048 \
+    --micro_batch_size 16 \
+    --max_steps 6000 \
+    --checkpoint_steps 600 \
+    --save_steps 600 \
+    --logging_freq 600 \
+    --eval_freq 600
+```
+
  <br>
 
 **以下循环操作**
