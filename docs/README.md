@@ -33,7 +33,6 @@
 * [图神经](https://kg-nlp.github.io/Algorithm-Project-Manual/图神经/)
 * [模型压缩](https://kg-nlp.github.io/Algorithm-Project-Manual/模型压缩/)
 * [文本生成](https://kg-nlp.github.io/Algorithm-Project-Manual/文本生成/)
-* [检索系统](https://kg-nlp.github.io/Algorithm-Project-Manual/检索系统/)
 * [知识图谱](https://kg-nlp.github.io/Algorithm-Project-Manual/知识图谱/)   
 * [机构学](https://kg-nlp.github.io/Algorithm-Project-Manual/机构学/)
 
