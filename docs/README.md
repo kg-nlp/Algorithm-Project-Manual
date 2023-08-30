@@ -43,6 +43,17 @@
 | 更新日期 | 更新内容                         | 备注 |
 | -------- | -------------------------------- | ---- |
 | 20230817 | 增加开发工具,增加LLM相关资料阅读 |      |
+| 20230830 | 增加领域向量模型                 |      |
+
+
+
+
+
+* 添加信息请备注: 姓名-公司/学校-方向
+
+![](https://note.youdao.com/yws/api/personal/file/WEB04aacfb37a8d476dadaba4c76e390b6a?method=download&shareKey=0f374a5f6d8ade14016e7cc57eb22154)
+
+
 
 
 

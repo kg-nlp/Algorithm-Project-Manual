@@ -221,6 +221,7 @@ sort: 5
 * [微调百川Baichuan-13B保姆式教程，手把手教你训练百亿大模型](https://mp.weixin.qq.com/s/ZBY6kbogHjbCQvZBzNEqag)
 * [Firefly增强Baichuan-13B的多轮对话能力](https://mp.weixin.qq.com/s/djO8Tg3emmy6wzw_rTUlcw)
 * [大模型LLM微调经验总结&项目更新](https://mp.weixin.qq.com/s/wBWpjoMSLgUXammnv0kuAw)
+* [GPT-3.5 微调实践](https://mp.weixin.qq.com/s/m8rdFrVuZbyZlxZ_PiFC3g)
 
 ### 其他
 
@@ -256,6 +257,7 @@ sort: 5
 * [关于检索增强下大模型知识边界的探索](https://mp.weixin.qq.com/s/G60VI3sJiMXmZxGoIBUO6Q)
 * [极客时间AIGC知识库](https://gp477l8icq.feishu.cn/wiki/JUXnwzSuviL5E9kh6jUc8FRinHe)
 * [huggingface blog](https://github.com/huggingface/blog/tree/main/zh)
+* [大模型训练需要花费多长时间：FLOPs的简单计算方法及calflop开源实现](https://mp.weixin.qq.com/s/nB-ldVgWJTJhwI-f7rO7IQ)
 
 ## 数据处理+模型训练
 
