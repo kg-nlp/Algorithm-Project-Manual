@@ -49,7 +49,7 @@
 
 
 
-* 添加信息请备注: 姓名-公司/学校-方向
+* 添加微信请备注: 姓名-公司/学校-方向
 
 <img src="https://note.youdao.com/yws/api/personal/file/WEB04aacfb37a8d476dadaba4c76e390b6a?method=download&shareKey=0f374a5f6d8ade14016e7cc57eb22154" style="zoom: 25%;" />
 
