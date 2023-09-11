@@ -263,6 +263,16 @@ sort: 5
 * [huggingface blog](https://github.com/huggingface/blog/tree/main/zh)
 * [大模型训练需要花费多长时间：FLOPs的简单计算方法及calflop开源实现](https://mp.weixin.qq.com/s/nB-ldVgWJTJhwI-f7rO7IQ)
 
+
+
+### 网页端
+
+* [智谱清言](https://chatglm.cn/detail)
+* [文心一言](https://yiyan.baidu.com/)
+* [星火认知](https://xinghuo.xfyun.cn/desk)
+
+
+
 ## 数据处理+模型训练
 
 
