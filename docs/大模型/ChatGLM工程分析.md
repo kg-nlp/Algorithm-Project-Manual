@@ -9,6 +9,9 @@ sort: 7
 
 * [个人知乎](https://www.zhihu.com/people/zhangyj-n)
 
+[TOC]
+
+## 资料
 
 [GLM-130B](https://github.com/THUDM/GLM-130B/blob/main/README_zh.md)
 
@@ -27,14 +30,16 @@ ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本，�
 
 [2023/07/04] 发布 P-Tuning v2 与 全参数微调脚本，参见 [P-Tuning](https://github.com/THUDM/ChatGLM2-6B/tree/main/ptuning)。
 
+[ChatGLM 的 Prompt 工程实践教程](https://lslfd0slxc.feishu.cn/docx/Nqm9dX81hotVYUxFQuxcVR82n2g)
+
 
 ## 部署
-* 启动
+* ### 网页端启动
 
 ```bash
 
 ln -s /opt/conda/bin/streamlit /usr/local/bin/streamlit
-streamlit run web_demo2.py --server.port 7020
+streamlit run web_demo2.py --server.port 8003
 网页访问:
 访问 http://10.0.79.103:7020
 ```
@@ -47,9 +52,11 @@ curl -X POST "http://10.0.79.103:7030/chatglm" \
 ```
 
 
-* API请求
-  * url: http://10.0.79.103:7030/chatglm
+* ### API请求
+  
+  * url: http://10.0.79.103:8001/chatglm
   * 请求格式: 
+  
   ```
     {
         "prompt":"",
@@ -72,10 +79,12 @@ curl -X POST "http://10.0.79.103:7030/chatglm" \
     "status": 200,
     "time": "2023-07-25 09:47:00"
     }
-    ```
+  ```
+  
+  * 请求示例
 
 ```python
-# -*- coding:utf-8 -*-
+	# -*- coding:utf-8 -*-
 '''
 # @FileName    :request.py
 ---------------------------------
@@ -131,9 +140,5 @@ if __name__ == "__main__":
 
     get_chatglm_info(chatglm_data)
     get_baichuan_info(baichuan_data)
-
-
-
-
-
 ```
+
