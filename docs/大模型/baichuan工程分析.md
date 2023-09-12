@@ -4,9 +4,23 @@ sort: 8
 
 # baichuan工程分析
 
+* [算法开发手册](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型)
+
+* [个人知乎](https://www.zhihu.com/people/zhangyj-n)
+
+[TOC]
+
+
+
 ## 简介
 
 baichuan-7B 是由百川智能开发的一个开源可商用的大规模预训练语言模型。基于 Transformer 结构，在大约1.2万亿 tokens 上训练的70亿参数模型，支持中英双语，上下文窗口长度为4096。在标准的中文和英文权威 benchmark（C-EVAL/MMLU）上均取得同尺寸最好的效果。
+
+
+
+## 资料
+
+* [Baichuan 2: Open Large-scale Language Models](https://zhuanlan.zhihu.com/p/655606405)
 
 
 
@@ -61,4 +75,4 @@ curl -X POST "http://10.0.79.103:7010/baichuan" \
     "status": 200,
     "time": "2023-07-25 09:47:00"
     }
-    ```
+  ```
