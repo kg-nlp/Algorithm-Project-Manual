@@ -169,6 +169,8 @@ if __name__ == "__main__":
 
 > 输入英文更加稳定点
 
+
+
 ```
 prompt = '''
     1 You need to generate one semantically identical statements based on the information in <>.
@@ -200,6 +202,8 @@ prompt = '''
 > 类别要明确,示例要给全, 结果可能会把"输出类别"这几个字带出
 >
 > 行与行之间不要有太多的空行,示例和最后输出中间用---隔开
+
+
 
 ```
 你是一名自然语言处理工程师，负责开发一个文本分类模型，该模型可以将电影评论分为正面和负面两类。
