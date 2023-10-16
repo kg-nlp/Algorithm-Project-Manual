@@ -24,12 +24,12 @@
 * [向量表示](https://kg-nlp.github.io/Algorithm-Project-Manual/向量表示/)
 * [开发工具](https://kg-nlp.github.io/Algorithm-Project-Manual/开发工具/)
 * [算法框架](https://kg-nlp.github.io/Algorithm-Project-Manual/算法框架/)
+* [算法语料](https://kg-nlp.github.io/Algorithm-Project-Manual/算法语料/)
 
 ## 等待迁移
 
 * [多模态](https://kg-nlp.github.io/Algorithm-Project-Manual/多模态/)
 * [数据结构](https://kg-nlp.github.io/Algorithm-Project-Manual/数据结构/)
-* [算法语料](https://kg-nlp.github.io/Algorithm-Project-Manual/算法语料/)
 * [图神经](https://kg-nlp.github.io/Algorithm-Project-Manual/图神经/)
 * [模型压缩](https://kg-nlp.github.io/Algorithm-Project-Manual/模型压缩/)
 * [文本生成](https://kg-nlp.github.io/Algorithm-Project-Manual/文本生成/)
@@ -46,7 +46,7 @@
 | 20230830 | 增加领域向量模型                 |      |
 | 20230904 | 增加算法框架相关内容             |      |
 | 20231011 | 增加模型部署,模型转换,向量搜索   |      |
-| 20231017 | 增加工程内容                     |      |
+| 20231017 | 增加工程内容,算法语料(crawler)   |      |
 
 
 

@@ -1,0 +1,150 @@
+---
+sort: 1
+---
+
+# 爬虫工程
+
+* [算法开发手册](https://kg-nlp.github.io/Algorithm-Project-Manual/开发工具/爬虫工程.html)
+* [个人知乎](https://www.zhihu.com/people/zhangyj-n)
+
+## scrapy
+
+**创建任务**
+
+```
+scrapy startproject 爬虫工程名
+```
+
+
+
+**创建脚本**
+
+```
+cd 爬虫工程名 
+scrapy genspider 爬虫教本 域名
+```
+
+
+
+**启动任务**
+
+- 将日志保存到文件中，控制台不再打印
+
+```
+cd 爬虫工程名
+scrapy crawl build_lib_spider  -s LOG_FILE=all_1000.log  
+scrapy crawl blog  -s LOG_FILE=all.log  
+scrapy crawl forum -s LOG_FILE=forum.log
+scrapy crawl get_data_url -s LOG_FILE=coyis_url.log
+scrapy crawl get_data_content -s LOG_FILE=coyis_content.log
+```
+
+
+
+**2.3 版本手册问题**
+
+1. 作为创建请求对象的快捷方式，您可以使用 response.follow 替代scrapy.Request
+
+```
+next_page = response.css('li.next a::attr(href)').get()
+if next_page is not None:
+    yield response.follow(next_page, callback=self.parse)
+不像Scrapy.Request， ​response.follow​ 直接支持相对URL-无需调用URLJOIN。注意 ​response.follow​ 只返回一个请求实例
+```
+
+
+
+**参考**
+
+https://www.runoob.com/w3cnote/scrapy-detail.html  菜鸟教程
+
+Scrapy 是用 Python 实现的一个为了爬取网站数据、提取结构性数据而编写的应用框架
+
+https://www.w3cschool.cn/scrapy2_3/scrapy2_3-dc1g3fkl.html  中文2.3教程
+
+https://www.osgeo.cn/scrapy/intro/tutorial.html#creating-a-project  中文2.5教程
+
+https://docs.scrapy.org/en/latest/intro/overview.html 英文2.7教程
+
+
+
+## **XPath路径表达式**
+
+在 XPath 中，有七种类型的节点：
+
+元素、
+
+属性、
+
+文本、
+
+命名空间、
+
+处理指令、
+
+注释、
+
+文档（根）节点
+
+XML 文档是被作为节点树来对待的。树的根被称为文档节点或者根节点
+
+![image-20231016210741428](爬虫工程.assets/image-20231016210741428.png)
+
+
+
+![image-20231016210748784](爬虫工程.assets/image-20231016210748784.png)
+
+
+
+![image-20231016210755088](爬虫工程.assets/image-20231016210755088.png)
+
+
+
+<img src="爬虫工程.assets/image-20231016210814890.png" alt="image-20231016210814890" style="zoom:80%;" />
+
+
+
+![image-20231016210842706](爬虫工程.assets/image-20231016210842706.png)
+
+
+
+![image-20231016210849137](爬虫工程.assets/image-20231016210849137.png)
+
+
+
+![image-20231016210853686](爬虫工程.assets/image-20231016210853686.png)
+
+
+
+* 示例
+
+```
+//*[@id="content"]/table/tbody/tr[2]/td[2]
+选取所有元素，这些元素拥有值为content的id属性，还有table元素，tbody元素，第二个tr元素下 第二个td元素
+```
+
+
+
+| **xpath**                                                    | **说明**                               | 值                                                           | **规则**                           | 路径                 |
+| ------------------------------------------------------------ | -------------------------------------- | ------------------------------------------------------------ | ---------------------------------- | -------------------- |
+| http://www.jianbiaoku.com/Content/CatyegoryHome_115.aspx     | 获取国家规范                           | 国家规范链接                                                 | root                               | 国家规范             |
+| /html/body/div[2]/div/div[2]/div[1]/div/ul/li[position()>1]/a/@* | 获取国家规范下的各子目录属性值         | /webarbs/list/117/1.shtml_self                               | 遍历li[1]                          | 建筑专业/暖通空调... |
+| /html/body/div[2]/div/div[2]/div[2]/div/div[position()>2]/span[1]/a/@* | 获取建筑专业下子目录属性值             | /webarbs/book/76673/2759331.shtml《住宅设计规范》GB 50096-2011局部修订条文及说明（征求意见稿）_blank | 遍历最后一个div[2]，从2开始        | 如果出现404 怎么解决 |
+| /html/body/div[2]/div/div[2]/div[2]/div/div[32]/div/span[2]  | 当前页                                 | 1                                                            |                                    |                      |
+| /html/body/div[2]/div/div[2]/div[2]/div/div[32]/div/a[text()="下页"]/@href | 下一页                                 | 下页                                                         | 需要判断当前页是下页，取属性值链接 |                      |
+| /html/body/div[2]/div/div[2]/div[1]/ul/li[position()>1]/span[2]/a/@* | 获取当前标题的所有属性值，第一行为链接 | /webarbs/book/160790/4740847.shtml工程勘察通用规范 GB 55017-2021_self | 遍历li[1]                          |                      |
+| /html/body/div[2]/div/div[2]/div[2]/div[1]                   | 获取当前链接，标题的所有内容           |                                                              | 遍历上面依次读下面的数据           |                      |
+
+
+
+## **XML**
+
+
+
+**参考**
+
+菜鸟教程:
+
+https://www.runoob.com/xpath/xpath-intro.html
+
+https://www.runoob.com/xml/xml-intro.html
