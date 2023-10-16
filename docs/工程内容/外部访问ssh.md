@@ -136,3 +136,10 @@ $ vim /root/.bashrc
 $ service ssh start
 ```
 
+
+
+
+
+更多内容查看
+
+[环境框架安装](https://kg-nlp.github.io/Algorithm-Project-Manual/算法框架/框架环境.html)
