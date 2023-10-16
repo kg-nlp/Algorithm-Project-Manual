@@ -262,6 +262,8 @@ sort: 5
 * [极客时间AIGC知识库](https://gp477l8icq.feishu.cn/wiki/JUXnwzSuviL5E9kh6jUc8FRinHe)
 * [huggingface blog](https://github.com/huggingface/blog/tree/main/zh)
 * [大模型训练需要花费多长时间：FLOPs的简单计算方法及calflop开源实现](https://mp.weixin.qq.com/s/nB-ldVgWJTJhwI-f7rO7IQ)
+* [微调和提示工程的最佳实践](https://uploads-ssl.webflow.com/5ac6b7f2924c656f2b13a88c/64e3d4b0a61f4e2fdab7c92e_LLM_FT_PE_Whitepaper_.pdf)
+* [最佳实践: 从头开始训练或微调LLM](https://uploads-ssl.webflow.com/5ac6b7f2924c656f2b13a88c/6435aabdc0a041194b243eef_Current%20Best%20Practices%20for%20Training%20LLMs%20from%20Scratch%20-%20Final.pdf)
 
 
 
