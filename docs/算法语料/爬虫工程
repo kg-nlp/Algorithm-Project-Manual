@@ -7,9 +7,15 @@ sort: 1
 * [算法开发手册](https://kg-nlp.github.io/Algorithm-Project-Manual/开发工具/爬虫工程.html)
 * [个人知乎](https://www.zhihu.com/people/zhangyj-n)
 
+
+
+[TOC]
+
+
+
 ## scrapy
 
-**创建任务**
+### **创建任务**
 
 ```
 scrapy startproject 爬虫工程名
@@ -17,7 +23,7 @@ scrapy startproject 爬虫工程名
 
 
 
-**创建脚本**
+### **创建脚本**
 
 ```
 cd 爬虫工程名 
@@ -26,7 +32,7 @@ scrapy genspider 爬虫教本 域名
 
 
 
-**启动任务**
+### **启动任务**
 
 - 将日志保存到文件中，控制台不再打印
 
@@ -41,7 +47,7 @@ scrapy crawl get_data_content -s LOG_FILE=coyis_content.log
 
 
 
-**2.3 版本手册问题**
+### **2.3 版本手册问题**
 
 1. 作为创建请求对象的快捷方式，您可以使用 response.follow 替代scrapy.Request
 
@@ -54,7 +60,7 @@ if next_page is not None:
 
 
 
-**参考**
+### **参考**
 
 https://www.runoob.com/w3cnote/scrapy-detail.html  菜鸟教程
 
@@ -88,17 +94,19 @@ https://docs.scrapy.org/en/latest/intro/overview.html 英文2.7教程
 
 XML 文档是被作为节点树来对待的。树的根被称为文档节点或者根节点
 
+### 选取节点
+
 ![image-20231016210741428](爬虫工程.assets/image-20231016210741428.png)
 
 
 
 ![image-20231016210748784](爬虫工程.assets/image-20231016210748784.png)
 
-
+### 谓语
 
 ![image-20231016210755088](爬虫工程.assets/image-20231016210755088.png)
 
-
+### XPath轴
 
 <img src="爬虫工程.assets/image-20231016210814890.png" alt="image-20231016210814890" style="zoom:80%;" />
 
@@ -106,15 +114,15 @@ XML 文档是被作为节点树来对待的。树的根被称为文档节点或�
 
 ![image-20231016210842706](爬虫工程.assets/image-20231016210842706.png)
 
-
+### 选取未知节点
 
 ![image-20231016210849137](爬虫工程.assets/image-20231016210849137.png)
 
-
+### 选取若干路径
 
 ![image-20231016210853686](爬虫工程.assets/image-20231016210853686.png)
 
-
+### 示例
 
 * 示例
 
@@ -139,7 +147,217 @@ XML 文档是被作为节点树来对待的。树的根被称为文档节点或�
 
 ## **XML**
 
+### **概念**
 
+XML 被设计用来传输和存储数据，其焦点是数据的内容。
+
+- HTML 被设计用来显示数据，其焦点是数据的外观。
+- XML 标签没有被预定义,XML 允许创作者定义自己的标签和自己的文档结构。
+- HTML 中使用的标签都是预定义的。HTML 文档只能使用在 HTML 标准中定义过的标签（如  `<p>` 、`<h1>`等等)
+
+HTML 旨在显示信息，而 XML 旨在传输信息。
+
+**XML 是独立于软件和硬件的信息传输工具**
+
+
+
+### **基础**
+
+- HTML 某些元素不必有关闭标签，但XML必须得有关闭
+- xml的属性值必须加引号
+- ＜，＞，&，‘，“ 不能直接写，得需要实体引用
+- 注释：`<!-- ...... -->`
+- HTML 多个空格会剪裁合并成一个，但XML不会
+- XML以换行符（LF）存储换行
+- 一个元素可以包含：其他元素，属性，文本
+- 尽量使用元素，文本的操作，不要元素，属性，属性值
+- 元数据（有关数据的数据）应当存储为属性，而数据本身应当存储为元素  `<note id="501">`
+
+### **验证**
+
+文档类型定义DTD可定义合法的XML文档构建模块
+
+### **显示**
+
+CSS格式化XML
+
+XSLT显示XML：XSLT 是在浏览器显示 XML 文件之前，先把它转换为 HTML
+
+### **XML DOM**
+
+XML DOM（XML Document Object Model）定义了访问和操作 XML 文档的标准方法
+
+XML DOM 把 XML 文档作为树结构来查看。
+
+所有元素可以通过 DOM 树来访问。可以修改或删除它们的内容，并创建新的元素。元素，它们的文本，以及它们的属性，都被认为是节点
+
+
+
+## **HTML**
+
+![image-20231017084209644](爬虫工程.assets/image-20231017084209644.png)
+
+
+
+- `<!DOCTYPE html>` 声明为 HTML5 文档
+- `<html>` 元素是 HTML 页面的根元素
+- `<head>` 元素包含了文档的元（meta）数据，如 `<meta charset="utf-8">` 定义网页编码格式为 utf-8。
+- `<title>` 元素描述了文档的标题
+- `<body>` 元素包含了可见的页面内容
+- `<h1>` 元素定义一个大标题
+- `<p>`元素定义一个段落
+
+### **基础**
+
+- 防止浏览器乱码：
+
+- -   `<!doctype hmtl> <meta charset="utf-8" />`
+
+- 最好标签闭合，元素标签小写
+
+### **预定义元素**
+
+HTML 参考手册- (HTML5 标准)
+
+https://www.runoob.com/tags/html-reference.html
+
+速查列表
+
+https://www.runoob.com/html/html-quicklist.html
+
+下面标签记得添加 <>
+
+| **开始标签 \***                                              | **元素内容**                                 | **结束标签 \*** |
+| ------------------------------------------------------------ | -------------------------------------------- | --------------- |
+| p                                                            | 这是一个段落                                 | /p              |
+| a href="default.htm"                                         | 这是一个链接                                 | /a              |
+| br                                                           | 换行                                         |                 |
+| hr                                                           | 标签在 HTML 页面中创建水平线                 |                 |
+| [!--...--](https://www.runoob.com/tags/tag-comment.html)     | 定义注释                                     |                 |
+| [body](https://www.runoob.com/tags/tag-body.html)            | 定义文档的主体                               |                 |
+| [h1 - h6](https://www.runoob.com/tags/tag-hn.html)           | 定义 HTML 标题                               |                 |
+| [b](https://www.runoob.com/tags/tag-b.html)                  | 定义粗体文本                                 |                 |
+| [em](https://www.runoob.com/tags/tag-em.html)                | 定义着重文字                                 |                 |
+| [i](https://www.runoob.com/tags/tag-i.html)                  | 定义斜体字                                   |                 |
+| [small](https://www.runoob.com/tags/tag-small.html)          | 定义小号字                                   |                 |
+| [strong](https://www.runoob.com/tags/tag-strong.html)        | 定义加重语气                                 |                 |
+| [sub](https://www.runoob.com/tags/tag-sub.html)              | 定义下标字                                   |                 |
+| [sup](https://www.runoob.com/html/m/tags/tag-sup.html)       | 定义上标字                                   |                 |
+| [ins](https://www.runoob.com/tags/tag-ins.html)              | 定义插入字                                   |                 |
+| [del](https://www.runoob.com/tags/tag-del.html)              | 定义删除字                                   |                 |
+| [code](https://www.runoob.com/tags/tag-code.html)            | 定义计算机代码                               |                 |
+| [kbd](https://www.runoob.com/tags/tag-kbd.html)              | 定义键盘码                                   |                 |
+| [samp](https://www.runoob.com/tags/tag-samp.html)            | 定义计算机代码样本                           |                 |
+| [var](https://www.runoob.com/tags/tag-var.html)              | 定义变量                                     |                 |
+| [pre](https://www.runoob.com/tags/tag-pre.html)              | 定义预格式文本                               |                 |
+| [abbr](https://www.runoob.com/tags/tag-abbr.html)            | 定义缩写                                     |                 |
+| [address](https://www.runoob.com/tags/tag-address.html)      | 定义地址                                     |                 |
+| [bdo](https://www.runoob.com/tags/tag-bdo.html)              | 定义文字方向                                 |                 |
+| [blockquote](https://www.runoob.com/tags/tag-blockquote.html) | 定义长的引用                                 |                 |
+| [q](https://www.runoob.com/tags/tag-q.html)                  | 定义短的引用语                               |                 |
+| [cite](https://www.runoob.com/tags/tag-cite.html)            | 定义引用、引证                               |                 |
+| [dfn](https://www.runoob.com/tags/tag-dfn.html)              | 定义一个定义项目。                           |                 |
+| mailto:*name@email.com*                                      | 邮件接收地址                                 |                 |
+| cc=*name@email.com*                                          | 抄送地址                                     |                 |
+| bcc=*name@email.com*                                         | 密件抄送地址                                 |                 |
+| subject=*subject text*                                       | 邮件主题                                     |                 |
+| body=*body text*                                             | 邮件内容                                     |                 |
+| ?                                                            | 第一个参数分隔符                             |                 |
+| &                                                            | 其他参数分隔符                               |                 |
+| [head](https://www.runoob.com/tags/tag-head.html)            | 定义了文档的信息                             |                 |
+| [title](https://www.runoob.com/tags/tag-title.html)          | 定义了文档的标题                             |                 |
+| **链接**                                                     |                                              |                 |
+| [base](https://www.runoob.com/tags/tag-base.html)            | 定义了页面链接标签的默认链接地址             |                 |
+| [link](https://www.runoob.com/tags/tag-link.html)            | 定义了一个文档和外部资源之间的关系           |                 |
+| [meta](https://www.runoob.com/tags/tag-meta.html)            | 定义了HTML文档中的元数据                     |                 |
+| [script](https://www.runoob.com/tags/tag-script.html)        | 定义了客户端的脚本文件                       |                 |
+| [style](https://www.runoob.com/tags/tag-style.html)          | 定义了HTML文档的样式文件                     |                 |
+| **图像**                                                     |                                              |                 |
+| [img](https://www.runoob.com/tags/tag-img.html)              | 定义图像                                     |                 |
+| [map](https://www.runoob.com/tags/tag-map.html)              | 定义图像地图                                 |                 |
+| [area](https://www.runoob.com/tags/tag-area.html)            | 定义图像地图中的可点击区域                   |                 |
+| **表格**                                                     |                                              |                 |
+| [table](https://www.runoob.com/tags/tag-table.html)          | 定义表格                                     |                 |
+| [th](https://www.runoob.com/tags/tag-th.html)                | 定义表格的表头                               |                 |
+| [tr](https://www.runoob.com/tags/tag-tr.html)                | 定义表格的行                                 |                 |
+| [td](https://www.runoob.com/tags/tag-td.html)                | 定义表格单元                                 |                 |
+| [caption](https://www.runoob.com/tags/tag-caption.html)      | 定义表格标题                                 |                 |
+| [colgroup](https://www.runoob.com/tags/tag-colgroup.html)    | 定义表格列的组                               |                 |
+| [col](https://www.runoob.com/tags/tag-col.html)              | 定义用于表格列的属性                         |                 |
+| [thead](https://www.runoob.com/tags/tag-thead.html)          | 定义表格的页眉                               |                 |
+| [tbody](https://www.runoob.com/tags/tag-tbody.html)          | 定义表格的主体                               |                 |
+| [tfoot](https://www.runoob.com/tags/tag-tfoot.html)          | 定义表格的页脚                               |                 |
+| **列表**                                                     |                                              |                 |
+| [ol](https://www.runoob.com/tags/tag-ol.html)                | 定义有序列表                                 |                 |
+| [ul](https://www.runoob.com/tags/tag-ul.html)                | 定义无序列表                                 |                 |
+| [li](https://www.runoob.com/tags/tag-li.html)                | 定义列表项                                   |                 |
+| [dl](https://www.runoob.com/tags/tag-dl.html)                | 定义列表                                     |                 |
+| [dt](https://www.runoob.com/tags/tag-dt.html)                | 自定义列表项目                               |                 |
+| [dd](https://www.runoob.com/tags/tag-dd.html)                | 定义自定列表项的描述                         |                 |
+| **区块、布局**                                               |                                              |                 |
+| [div](https://www.runoob.com/tags/tag-div.html)              | 定义了文档的区域，块级 (block-level)         |                 |
+| [span](https://www.runoob.com/tags/tag-span.html)            | 用来组合文档中的行内元素， 内联元素(inline)  |                 |
+| **表单**                                                     |                                              |                 |
+| [form](https://www.runoob.com/tags/tag-form.html)            | 定义供用户输入的表单                         |                 |
+| [input](https://www.runoob.com/tags/tag-input.html)          | 定义输入域                                   |                 |
+| [textarea](https://www.runoob.com/tags/tag-textarea.html)    | 定义文本域 (一个多行的输入控件)              |                 |
+| [label](https://www.runoob.com/tags/tag-label.html)          | 定义了 input 元素的标签，一般为输入标题      |                 |
+| [fieldset](https://www.runoob.com/tags/tag-fieldset.html)    | 定义了一组相关的表单元素，并使用外框包含起来 |                 |
+| [legend](https://www.runoob.com/tags/tag-legend.html)        | 定义了 fieldset 元素的标题                   |                 |
+| [select](https://www.runoob.com/tags/tag-select.html)        | 定义了下拉选项列表                           |                 |
+| [optgroup](https://www.runoob.com/tags/tag-optgroup.html)    | 定义选项组                                   |                 |
+| [option](https://www.runoob.com/tags/tag-option.html)        | 定义下拉列表中的选项                         |                 |
+| [button](https://www.runoob.com/tags/tag-button.html)        | 定义一个点击按钮                             |                 |
+| [datalist](https://www.runoob.com/tags/tag-datalist.html)**New** | 指定一个预先定义的输入控件选项列表           |                 |
+| [keygen](https://www.runoob.com/tags/tag-keygen.html)**New** | 定义了表单的密钥对生成器字段                 |                 |
+| [output](https://www.runoob.com/tags/tag-output.html)**New** | 定义一个计算结果                             |                 |
+| **框架**                                                     |                                              |                 |
+| [iframe](https://www.runoob.com/tags/tag-iframe.html)        | 定义一个内联的iframe                         |                 |
+| **脚本**                                                     |                                              |                 |
+| [script](https://www.runoob.com/tags/tag-script.html)        | 定义了客户端脚本                             |                 |
+| [noscript](https://www.runoob.com/tags/tag-noscript.html)    | 定义了不支持脚本浏览器输出的文本             |                 |
+
+## **CSS**
+
+为结构化文档添加样式（字体，间距，颜色）
+
+CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明:
+
+CSS注释以 **/\*** 开始, 以 ***/** 结束, 实例如下:
+
+https://www.runoob.com/css/css-tutorial.html
+
+### **基础**
+
+- HTML元素以id属性来设置id选择器,CSS 中 id 选择器以 "#" 来定义。
+- class 选择器在 HTML 中以 class 属性表示, 在 CSS 中，类选择器以一个点 **.** 号显示：
+- 以及其他选择器
+
+## **JavaScript**
+
+https://www.runoob.com/js/js-tutorial.html
+
+1. HTML 定义了网页的内容
+2. CSS 描述了网页的布局
+3. JavaScript 控制了网页的行为
+
+HTML 中使用script标签
+
+JavaScript 函数和事件
+
+如果放在外部单独写，不用有script，在html中调用的时候需要写script
+
+### **基础**
+
+- F12开发者工具中，Console和Sources编写命令行代码，和脚本
+- js是一种编程语言
+- 分号分隔js语句
+- 单行注释以 **//** 开头
+- 多行注释以 **/\*** 开始，以 ***/** 结尾
+
+## **HTTP**
+
+https://www.runoob.com/http/http-methods.html
 
 **参考**
 
