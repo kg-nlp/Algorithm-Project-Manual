@@ -26,6 +26,7 @@
 * [算法框架](https://kg-nlp.github.io/Algorithm-Project-Manual/算法框架/)
 * [算法语料](https://kg-nlp.github.io/Algorithm-Project-Manual/算法语料/)
 * [图神经](https://kg-nlp.github.io/Algorithm-Project-Manual/图神经/)
+* [读书笔记](https://kg-nlp.github.io/Algorithm-Project-Manual/读书笔记/)
 
 ## 等待迁移
 
@@ -48,6 +49,7 @@
 | 20231011 | 增加模型部署,模型转换,向量搜索   |      |
 | 20231017 | 增加工程内容,算法语料(crawler)   |      |
 | 20231018 | 更新图神经和工程内容             |      |
+| 20231019 | 更新读书笔记                     |      |
 
 
 
