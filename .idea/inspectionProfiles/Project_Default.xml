@@ -1,0 +1,70 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="0" />
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyInterpreterInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredPackages">
+        <value>
+          <list size="39">
+            <item index="0" class="java.lang.String" itemvalue="tqdm" />
+            <item index="1" class="java.lang.String" itemvalue="scipy" />
+            <item index="2" class="java.lang.String" itemvalue="tensorboard" />
+            <item index="3" class="java.lang.String" itemvalue="colorlog" />
+            <item index="4" class="java.lang.String" itemvalue="scikit_learn" />
+            <item index="5" class="java.lang.String" itemvalue="colorama" />
+            <item index="6" class="java.lang.String" itemvalue="hyperopt" />
+            <item index="7" class="java.lang.String" itemvalue="torch" />
+            <item index="8" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="9" class="java.lang.String" itemvalue="requests" />
+            <item index="10" class="java.lang.String" itemvalue="paddlepaddle-gpu" />
+            <item index="11" class="java.lang.String" itemvalue="scikit-learn" />
+            <item index="12" class="java.lang.String" itemvalue="matplotlib" />
+            <item index="13" class="java.lang.String" itemvalue="pre-commit" />
+            <item index="14" class="java.lang.String" itemvalue="numpy" />
+            <item index="15" class="java.lang.String" itemvalue="paddlenlp" />
+            <item index="16" class="java.lang.String" itemvalue="IPython" />
+            <item index="17" class="java.lang.String" itemvalue="pydot" />
+            <item index="18" class="java.lang.String" itemvalue="py7zr" />
+            <item index="19" class="java.lang.String" itemvalue="PyYAML" />
+            <item index="20" class="java.lang.String" itemvalue="synonyms" />
+            <item index="21" class="java.lang.String" itemvalue="paddle-serving-app" />
+            <item index="22" class="java.lang.String" itemvalue="modin[all]" />
+            <item index="23" class="java.lang.String" itemvalue="pytorch_crf" />
+            <item index="24" class="java.lang.String" itemvalue="sqlalchemy" />
+            <item index="25" class="java.lang.String" itemvalue="pandas" />
+            <item index="26" class="java.lang.String" itemvalue="ddparser" />
+            <item index="27" class="java.lang.String" itemvalue="jinja2" />
+            <item index="28" class="java.lang.String" itemvalue="cn2an" />
+            <item index="29" class="java.lang.String" itemvalue="tables" />
+            <item index="30" class="java.lang.String" itemvalue="paddle2onnx" />
+            <item index="31" class="java.lang.String" itemvalue="pyexcel" />
+            <item index="32" class="java.lang.String" itemvalue="graphviz" />
+            <item index="33" class="java.lang.String" itemvalue="paddle-serving-client" />
+            <item index="34" class="java.lang.String" itemvalue="pyexcel-xls" />
+            <item index="35" class="java.lang.String" itemvalue="treelib" />
+            <item index="36" class="java.lang.String" itemvalue="pyexcel-xlsx" />
+            <item index="37" class="java.lang.String" itemvalue="hanlp" />
+            <item index="38" class="java.lang.String" itemvalue="paddle-serving-server-gpu" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E722" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="TsLint" enabled="true" level="WARNING" enabled_by_default="true" />
+  </profile>
+</component>
