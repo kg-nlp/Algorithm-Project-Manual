@@ -60,7 +60,7 @@
 
 * 添加微信请备注: 姓名-公司/学校-方向
 
-<img src="https://note.youdao.com/yws/api/personal/file/WEB04aacfb37a8d476dadaba4c76e390b6a?method=download&shareKey=0f374a5f6d8ade14016e7cc57eb22154" style="zoom: 25%;" />
+<img src="https://github.com/kg-nlp/Algorithm-Project-Manual/blob/main/%E5%9B%BE%E7%89%87/%E4%B8%AA%E4%BA%BA%E5%BE%AE%E4%BF%A1.jpg?raw=true"/>
 
 
 
