@@ -23,5 +23,7 @@ sort: 1
 
 * [LLM资料阅读](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/LLM资料阅读.html)
 
+* [DB-GPT调研](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/DB-GPT调研.html)
+
   
 
