@@ -4,7 +4,7 @@ sort: 4
 
 # ColossalAI源码分析
 
-[算法开发手册](https://kg-nlp.github.io/Algorithm-Project-Manual/%E5%A4%A7%E6%A8%A1%E5%9E%8B/ColossalAI%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90.html)
+[算法开发手册](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/ColossalAI源码分析.html)
 
 ## 环境配置
 
@@ -566,7 +566,7 @@ rl训练: 10000,13500,10000,10000
    ![详细流程图](https://note.youdao.com/yws/api/personal/file/WEB9db34c99ec6c971798a72b744d3ded86?method=download\&shareKey=7028569247d53a04a3dd8d397e1f7c45) 
 
     
-    
+   
 * [强化学习7-PPO(Agent-only) 逐行代码讲解](https://zhuanlan.zhihu.com/p/624797778)  还未看懂
 * [B站视频](https://www.bilibili.com/video/BV1yP4y1X7xF/?p=12)
 

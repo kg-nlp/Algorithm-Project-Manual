@@ -7,6 +7,8 @@ sort: 1
 **以下格式可能有错乱，请阅读原文**
 [有道云原文链接](https://note.youdao.com/s/KdL6qM0C)
 
+[最新算法开发手册](https://kg-nlp.github.io/Algorithm-Project-Manual/大模型/Prompt设计.html)
+
 ## 1 prompt-engineering-for-developers
 
 [链接](https://github.com/datawhalechina/prompt-engineering-for-developers)
